@@ -17,7 +17,7 @@ import time
 import argparse
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
-from typing import Optional
+from typing import Optional, List
 
 # Ensure UTF-8 output encoding for emojis on Windows PowerShell/CMD
 if sys.platform == "win32":
