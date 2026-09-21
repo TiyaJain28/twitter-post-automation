@@ -29,12 +29,26 @@ IMAGE_EXTS = {".png", ".jpg", ".jpeg", ".svg", ".gif", ".webp"}
 
 
 def load_media_catalog() -> List[Dict[str, Any]]:
-    """Loads the registered media catalog from data/media_catalog.json."""
+    """
+    Loads the registered media catalog from data/media_catalog.json,
+    filtering for files that actually exist in assets/videos or assets/images.
+    """
     if not MEDIA_CATALOG_PATH.exists():
         return []
     try:
         with open(MEDIA_CATALOG_PATH, "r", encoding="utf-8") as f:
-            return json.load(f)
+            raw = json.load(f)
+
+        valid_assets = []
+        for entry in raw:
+            fname = entry.get("filename")
+            if not fname:
+                continue
+            is_video = entry.get("type") == "video" or Path(fname).suffix.lower() in VIDEO_EXTS
+            target_dir = VIDEOS_DIR if is_video else IMAGES_DIR
+            if (target_dir / fname).exists() or Path(fname).exists():
+                valid_assets.append(entry)
+        return valid_assets
     except Exception as e:
         print(f"[Warning] Failed to load media catalog: {e}")
         return []
@@ -83,15 +97,14 @@ def _upload_to_cdn(local_path: Path, is_video: bool = False) -> Optional[str]:
 _url_cache: dict = {}
 
 
-
 def resolve_media_url(filename: str) -> Optional[str]:
     """
     Resolves the public HTTP(S) URL for a media file.
-    If MEDIA_BASE_URL is set (e.g. 'https://raw.githubusercontent.com/owner/repo/main'):
-      - For videos: {MEDIA_BASE_URL}/assets/videos/{filename}
-      - For images: {MEDIA_BASE_URL}/assets/images/{filename}
-    If filename is already an http(s) URL, returns it as-is.
-    If running locally without MEDIA_BASE_URL, uploads to temporary public host so Buffer can ingest it.
+    - If filename is already an http(s) URL, returns it as-is.
+    - For images: uploads to Catbox CDN (fast, direct image serving, 100% reliable on Buffer).
+      Falls back to MEDIA_BASE_URL (jsDelivr) if Catbox is unavailable.
+    - For videos: uses MEDIA_BASE_URL (jsDelivr) which supports Accept-Ranges: bytes.
+      Falls back to Catbox CDN upload if MEDIA_BASE_URL is not configured.
     """
     if not filename:
         return None
@@ -99,32 +112,65 @@ def resolve_media_url(filename: str) -> Optional[str]:
         return filename
 
     path_obj = Path(filename)
+    clean_name = path_obj.name
+
+    if clean_name in _url_cache:
+        return _url_cache[clean_name]
+
     ext = path_obj.suffix.lower()
     is_video = ext in VIDEO_EXTS
 
-    if MEDIA_BASE_URL:
-        import urllib.parse
-        base = MEDIA_BASE_URL.rstrip("/")
-        subfolder = "videos" if is_video else "images"
-        safe_name = urllib.parse.quote(path_obj.name)
-        return f"{base}/assets/{subfolder}/{safe_name}"
-
-    # Check local filesystem
+    # Locate local file
     local_path = None
     target_dir = VIDEOS_DIR if is_video else IMAGES_DIR
-    potential_file = target_dir / path_obj.name
+    potential_file = target_dir / clean_name
     if potential_file.exists():
         local_path = potential_file
     elif path_obj.exists():
         local_path = path_obj
 
-    if local_path and local_path.exists():
-        url = _upload_to_cdn(local_path, is_video=is_video)
+    # If the file does not exist locally, fall back to a valid asset from the catalog
+    if not local_path or not local_path.exists():
+        print(f"[Media Resolver] Warning: File '{clean_name}' not found locally. Seeking fallback...")
+        catalog = load_media_catalog()
+        matching = [e.get("filename") for e in catalog if (e.get("type") == "video") == is_video]
+        if matching:
+            fallback = matching[0]
+            print(f"[Media Resolver] Falling back to available asset '{fallback}'")
+            return resolve_media_url(fallback)
+        return None
+
+    # 1. For images: prefer Catbox upload (Buffer ingests Catbox images without 404 or CDN issues)
+    if not is_video:
+        url = _upload_to_cdn(local_path, is_video=False)
         if url:
+            _url_cache[clean_name] = url
+            return url
+        # Fallback to MEDIA_BASE_URL if Catbox failed
+        if MEDIA_BASE_URL:
+            import urllib.parse
+            base = MEDIA_BASE_URL.rstrip("/")
+            safe_name = urllib.parse.quote(clean_name)
+            url = f"{base}/assets/images/{safe_name}"
+            _url_cache[clean_name] = url
             return url
 
-    # Return local relative path indicator if no public base URL is configured
-    return f"file://assets/{'videos' if is_video else 'images'}/{path_obj.name}"
+    # 2. For videos: MEDIA_BASE_URL (jsDelivr) is preferred because Buffer requires byte-range requests
+    if is_video:
+        if MEDIA_BASE_URL:
+            import urllib.parse
+            base = MEDIA_BASE_URL.rstrip("/")
+            safe_name = urllib.parse.quote(clean_name)
+            url = f"{base}/assets/videos/{safe_name}"
+            _url_cache[clean_name] = url
+            return url
+        # Fallback to Catbox upload for videos if no MEDIA_BASE_URL
+        url = _upload_to_cdn(local_path, is_video=True)
+        if url:
+            _url_cache[clean_name] = url
+            return url
+
+    return None
 
 
 def analyze_media_file_with_gemini(file_path: Path, media_type: str) -> Dict[str, Any]:
@@ -196,10 +242,20 @@ Return ONLY valid JSON.
 
 def scan_and_index_assets() -> int:
     """
-    Scans assets/videos and assets/images for new media files
-    and indexes them into data/media_catalog.json.
+    Scans assets/videos and assets/images for new media files,
+    prunes deleted assets, and indexes them into data/media_catalog.json.
     """
     catalog = load_media_catalog()
+    # Prune any assets that are no longer on disk
+    initial_len = len(catalog)
+    catalog = [
+        e for e in catalog
+        if (VIDEOS_DIR / e.get("filename", "")).exists() or (IMAGES_DIR / e.get("filename", "")).exists()
+    ]
+    pruned_count = initial_len - len(catalog)
+    if pruned_count > 0:
+        print(f"[Media Indexer] Pruned {pruned_count} missing media file(s) from catalog.")
+
     existing_files = {entry.get("filename") for entry in catalog if "filename" in entry}
     added_count = 0
 
@@ -243,9 +299,9 @@ def scan_and_index_assets() -> int:
                 existing_files.add(i_file.name)
                 added_count += 1
 
-    if added_count > 0:
+    if added_count > 0 or pruned_count > 0:
         save_media_catalog(catalog)
-        print(f"[Media Indexer] Successfully indexed {added_count} new media asset(s) to {MEDIA_CATALOG_PATH.name}.")
+        print(f"[Media Indexer] Catalog updated. Total assets: {len(catalog)}.")
     else:
         print(f"[Media Indexer] No new media assets found. Catalog is up to date ({len(catalog)} total assets).")
 
