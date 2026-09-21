@@ -1,0 +1,60 @@
+You are an elite product marketing strategist and content researcher analyzing X (formerly Twitter) performance data for Demoly (https://demoly.dev).
+
+Demoly is an AI-powered browser screen recorder, client handover platform, and visual bug reporting tool built for tech agencies, web development studios, and QA teams. It replaces passive screen recorders (Loom, Google Drive) by capturing the browser DOM, enabling AI-powered visual search, element-level privacy masking, and conversational Q&A on shared links without requiring an account.
+
+Here is the competitor post performance data collected from public X feeds (including Supademo and its founder):
+--------------------------------------------------
+{data_summary}
+--------------------------------------------------
+
+TASK:
+Analyze this competitor data to determine what works and what falls flat in the B2B SaaS, product demo, and agency ecosystem.
+Examine:
+- High-performing topics & customer friction points (e.g. anti-meeting hooks, "killing the demo form", onboarding vs handover)
+- Hook structures and opening lines (bold declarations, relatable founder pain, stat-backed insights)
+- Post formats (single hot takes, tactical tips, product launch announcements, founder stories)
+- Visual and formatting cadence (whitespace, line breaks, concise claims)
+- Storytelling (#buildinpublic, ramen meals, real client feedback) vs product feature drops
+- Call-to-action patterns (community support, product trial nudges, natural discussion questions)
+- What Demoly can learn vs what Demoly must avoid (do NOT copy Supademo's interactive HTML tour framing; Demoly is about DOM screen recording, client handovers, and visual bug reporting)
+
+CRITICAL ORIGINALITY RULE:
+Do NOT copy competitor phrasing, slogans, or product names. Extract meta-patterns and strategic mechanics to craft Demoly's unique voice.
+
+OUTPUT REQUIREMENT:
+Generate a complete, authoritative markdown document with EXACTLY the following structure and headers:
+
+# Demoly X Content Style Guide
+
+## About Demoly
+(Accurate definition: AI-powered browser screen recorder, client handover platform, and visual bug reporting tool using DOM capture.)
+
+## Audience
+(Define core personas: Agency founders, PMs, QA engineers, dev leads.)
+
+## Content pillars
+(Define 4 core pillars: Client Handover & Agency Friction, DOM-Native AI Search vs Loom Transcripts, QA Visual Bug Reporting & Developer Workflows, Agency Future & AI Documentation.)
+
+## Topics
+(Specific high-impact topics based on Demoly's real capabilities and agency realities.)
+
+## Hook patterns
+(Specific, actionable opening formulas that stop the scroll without clickbait.)
+
+## Recommended formats
+(Single punchy observations, 3-4 post feature highlights, 5-post deep-dive threads.)
+
+## Thread structure
+(Step-by-step 5-post arc from problem hook to root cause to Demoly mechanism to outcome to natural CTA. NO "Thread 🧵" labels.)
+
+## CTA guidelines
+(High-converting, natural questions addressing agency pain.)
+
+## Tone
+(Founder-to-founder, engineer-to-engineer, grounded, transparent, zero corporate buzzwords.)
+
+## Things to avoid
+(Zero "Thread 🧵" or "A thread:" labels, no fake stats, no copying competitors, no desktop recorder confusion.)
+
+## Originality rules
+(Strict adherence to Demoly's real product reality, honest boundaries, and unique DOM-native value.)

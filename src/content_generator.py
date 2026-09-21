@@ -334,10 +334,11 @@ def generate_planned_post(
 
     # If this is an AI-generated image post, generate and attach the image now
     if getattr(plan_item, "generate_image", False) and plan_item.format == "media":
-        print("[Content Generator] Requesting AI image generation from Gemini Imagen...")
+        print("[Content Generator] Generating image accurately matching post text...")
         image_url = generate_image_for_post(
             focus_topic=plan_item.focus_topic,
             trend_connection=plan_item.trend_connection,
+            post_text=result.posts[0] if result.posts else None,
         )
         if image_url:
             result.media_filename = None  # No catalog filename — it's generated

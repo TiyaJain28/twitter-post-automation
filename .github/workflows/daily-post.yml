@@ -1,0 +1,88 @@
+name: Demoly Daily X Content Automation
+
+on:
+  # Daily automated schedule (e.g., runs every day at 13:30 UTC / 7:00 PM IST / 9:30 AM EDT)
+  # You can adjust the cron schedule below:
+  schedule:
+    - cron: '30 13 * * *'
+
+  # Manual trigger button in GitHub Actions UI for testing or on-demand posts
+  workflow_dispatch:
+    inputs:
+      force_type:
+        description: 'Content format or cadence'
+        required: false
+        default: 'daily-batch'
+        type: choice
+        options:
+          - daily-batch
+          - thread
+          - single
+          - random
+      live:
+        description: 'Publish live to X? (Uncheck for safe dry-run preview)'
+        required: false
+        default: true
+        type: boolean
+
+jobs:
+  run-demoly-x:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write # Allows committing updated data/published_posts.csv back to repo
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Demoly Content Automation
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          BUFFER_ACCESS_TOKEN: ${{ secrets.BUFFER_ACCESS_TOKEN }}
+          BUFFER_CHANNEL_ID: ${{ secrets.BUFFER_CHANNEL_ID }}
+          MEDIA_BASE_URL: ${{ secrets.MEDIA_BASE_URL || 'https://cdn.jsdelivr.net/gh/TiyaJain28/twitter-post-automation@main' }}
+          LIVE_MODE: ${{ secrets.LIVE_MODE || 'true' }}
+          DRY_RUN: ${{ secrets.DRY_RUN || 'false' }}
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            CMD_ARGS="--daily-batch --spaced --live"
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            if [ "${{ inputs.force_type }}" = "single" ]; then
+              CMD_ARGS="--type single"
+            elif [ "${{ inputs.force_type }}" = "thread" ]; then
+              CMD_ARGS="--type thread"
+            elif [ "${{ inputs.force_type }}" = "daily-batch" ]; then
+              CMD_ARGS="--daily-batch --spaced"
+            else
+              CMD_ARGS=""
+            fi
+            if [ "${{ inputs.live }}" = "false" ]; then
+              CMD_ARGS="$CMD_ARGS --dry-run"
+            else
+              CMD_ARGS="$CMD_ARGS --live"
+            fi
+          else
+            CMD_ARGS="--daily-batch --spaced --live"
+          fi
+          python -m src.main $CMD_ARGS
+
+
+      - name: Commit and push audit log updates
+        if: always()
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/published_posts.csv
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: update published posts audit log [skip ci]" && git push)

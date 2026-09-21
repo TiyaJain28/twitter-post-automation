@@ -122,3 +122,22 @@ class GeminiClient:
 
         raise RuntimeError(f"[GEMINI API ERROR] Content generation failed across models: {last_err}")
 
+    def generate_raw_text(self, prompt: str) -> str:
+        """
+        Generates freeform text from Gemini without structured JSON constraints.
+        Useful for prompt engineering, summaries, and title generation.
+        """
+        client = self._get_client()
+        for model in CANDIDATE_MODELS:
+            try:
+                response = client.models.generate_content(
+                    model=model,
+                    contents=prompt,
+                )
+                if response and response.text:
+                    return response.text.strip()
+            except Exception as e:
+                print(f"[Gemini Warning] {model} generate_raw_text failed: {e}")
+                continue
+        raise RuntimeError("[GEMINI API ERROR] Freeform text generation failed across all models.")
+

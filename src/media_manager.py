@@ -47,166 +47,41 @@ def save_media_catalog(catalog: List[Dict[str, Any]]) -> None:
         json.dump(catalog, f, indent=2, ensure_ascii=False)
 
 
+def _upload_catbox(path: Path) -> Optional[str]:
+    """Uploads a local image or media file to catbox.moe CDN."""
+    import requests
+    try:
+        with open(path, "rb") as f:
+            res = requests.post(
+                "https://catbox.moe/user/api.php",
+                data={"reqtype": "fileupload"},
+                files={"fileToUpload": (path.name, f)},
+                timeout=60,
+            )
+        if res.status_code == 200 and res.text.strip().startswith("http"):
+            return res.text.strip()
+    except Exception as e:
+        print(f"[Media Uploader] Catbox upload error: {e}")
+    return None
+
+
 def _upload_to_cdn(local_path: Path, is_video: bool = False) -> Optional[str]:
     """
     Uploads a local file to a public CDN that Buffer can ingest.
-    Tries multiple CDN providers in order — some work better for video vs image.
+    Uses catbox.moe for fast public hosting.
     """
-    import requests
-
-    if is_video:
-        cdns = [
-            # gofile.io — reachable, proper video CDN, direct download URL
-            {
-                "name": "gofile.io",
-                "fn": lambda path: _upload_gofile(path),
-            },
-            # pixeldrain.com — proper range-request support for video
-            {
-                "name": "pixeldrain",
-                "fn": lambda path: _upload_pixeldrain(path),
-            },
-            # tmpfiles.org — free, direct download URL, good for video
-            {
-                "name": "tmpfiles.org",
-                "fn": lambda path: _upload_tmpfiles(path),
-            },
-            # catbox.moe as last resort (Buffer sometimes rejects video URLs)
-            {
-                "name": "catbox.moe",
-                "fn": lambda path: _upload_catbox(path),
-            },
-        ]
-    else:
-        cdns = [
-            # catbox.moe: fast and reliable for images
-            {
-                "name": "catbox.moe",
-                "fn": lambda path: _upload_catbox(path),
-            },
-        ]
-
-    for cdn in cdns:
-        try:
-            print(f"[Media Uploader] Uploading {local_path.name} via {cdn['name']}...")
-            url = cdn["fn"](local_path)
-            if url:
-                print(f"[Media Uploader] Uploaded successfully via {cdn['name']}: {url}")
-                return url
-            else:
-                print(f"[Media Uploader] {cdn['name']} returned no URL.")
-        except Exception as e:
-            print(f"[Media Uploader] {cdn['name']} failed: {e}")
-
-    return None
-
-
-def _upload_catbox(path: Path) -> Optional[str]:
-    import requests
-    with open(path, "rb") as f:
-        res = requests.post(
-            "https://catbox.moe/user/api.php",
-            data={"reqtype": "fileupload"},
-            files={"fileToUpload": (path.name, f)},
-            timeout=60,
-        )
-    if res.status_code == 200 and res.text.strip().startswith("http"):
-        return res.text.strip()
-    return None
-
-
-def _upload_gofile(path: Path) -> Optional[str]:
-    """
-    Upload to gofile.io — returns a direct download URL.
-    Uses a sanitized filename to avoid URL encoding issues with special chars.
-    """
-    import requests
-    import re
-    import urllib.parse
-
-    # Sanitize filename: replace spaces/special chars for a clean URL
-    safe_name = re.sub(r"[^a-z0-9._-]", "_", path.name.lower()).strip("_")
-    if not safe_name.endswith(".mp4"):
-        safe_name = safe_name + ".mp4"
-
-    try:
-        # Step 1: Get available upload server
-        server_res = requests.get("https://api.gofile.io/servers", timeout=10).json()
-        server = server_res["data"]["servers"][0]["name"]
-    except Exception as e:
-        print(f"[gofile.io] Could not get server: {e}")
-        return None
-
-    try:
-        # Step 2: Upload file with sanitized filename so the URL is clean
-        with open(path, "rb") as f:
-            upload_res = requests.post(
-                f"https://{server}.gofile.io/uploadFile",
-                files={"file": (safe_name, f, "video/mp4")},
-                timeout=120,
-            ).json()
-
-        if upload_res.get("status") != "ok":
-            print(f"[gofile.io] Upload response not OK: {upload_res}")
-            return None
-
-        data = upload_res["data"]
-        guest_token = data.get("guestToken", "")
-        folder_code = data.get("parentFolderCode", "")
-        file_id = data.get("id", "")
-
-        # Direct download URL — sanitized filename, no special chars
-        direct_url = (
-            f"https://{server}.gofile.io/download/"
-            f"{urllib.parse.quote(guest_token)}/"
-            f"{urllib.parse.quote(folder_code)}/"
-            f"{urllib.parse.quote(file_id)}/"
-            f"{urllib.parse.quote(safe_name)}"
-        )
-        return direct_url
-    except Exception as e:
-        print(f"[gofile.io] Upload failed: {e}")
-        return None
-
-
-def _upload_pixeldrain(path: Path) -> Optional[str]:
-    """Upload to pixeldrain.com — returns a direct download URL suitable for video streaming."""
-    import requests
-    with open(path, "rb") as f:
-        res = requests.post(
-            f"https://pixeldrain.com/api/file/{path.name}",
-            files={"file": (path.name, f, "video/mp4")},
-            timeout=120,
-        )
-    if res.status_code == 201:
-        data = res.json()
-        file_id = data.get("id")
-        if file_id:
-            # Direct download URL that Buffer can stream
-            return f"https://pixeldrain.com/api/file/{file_id}?download"
-    return None
-
-
-def _upload_tmpfiles(path: Path) -> Optional[str]:
-    """Upload to tmpfiles.org — returns a direct link (7-day expiry)."""
-    import requests
-    with open(path, "rb") as f:
-        res = requests.post(
-            "https://tmpfiles.org/api/v1/upload",
-            files={"file": (path.name, f)},
-            timeout=120,
-        )
-    if res.status_code == 200:
-        data = res.json()
-        url = data.get("data", {}).get("url", "")
-        if url:
-            # Convert https://tmpfiles.org/XXXX/file to https://tmpfiles.org/dl/XXXX/file
-            return url.replace("https://tmpfiles.org/", "https://tmpfiles.org/dl/")
+    print(f"[Media Uploader] Uploading {local_path.name} to CDN...")
+    url = _upload_catbox(local_path)
+    if url:
+        print(f"[Media Uploader] Uploaded successfully: {url}")
+        return url
+    print("[Media Uploader] CDN upload failed.")
     return None
 
 
 # Simple in-process URL cache to avoid re-uploading the same file in one run
 _url_cache: dict = {}
+
 
 
 def resolve_media_url(filename: str) -> Optional[str]:
@@ -228,9 +103,11 @@ def resolve_media_url(filename: str) -> Optional[str]:
     is_video = ext in VIDEO_EXTS
 
     if MEDIA_BASE_URL:
+        import urllib.parse
         base = MEDIA_BASE_URL.rstrip("/")
         subfolder = "videos" if is_video else "images"
-        return f"{base}/assets/{subfolder}/{path_obj.name}"
+        safe_name = urllib.parse.quote(path_obj.name)
+        return f"{base}/assets/{subfolder}/{safe_name}"
 
     # Check local filesystem
     local_path = None
