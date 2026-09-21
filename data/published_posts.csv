@@ -42,3 +42,27 @@ Demoly's non-destructive browser timeline lets you trim mid-video cuts instantly
 Fix slips in seconds and ship clean links.
 
 #javascript #coding",6ab0fd71284c37fa34a13abe,sent (2026-09-21T17:00:00.000Z),img14.png
+2026-09-21 10:06:07 UTC,single,"Recording a 10-minute client walkthrough and calling it 'documentation' is an agency lie.
+
+If the client has to scrub through a raw MP4 to find a single setting, your handover has failed.
+
+Async video without search is just an expensive voicemail.
+
+2026-09-21 10:06:07 UTC,thread,"Most agencies lose 15+ hours a week to post-launch client support calls.
+
+Here are 5 rules to eliminate follow-up meetings and make your handovers completely self-serve: || 1. Never record raw pixel streams.
+
+Traditional recorders like Loom only transcribe spoken audio. If you didn't say it out loud, the client won't find it. || 2. Capture the browser DOM instead.
+
+Demoly indexes actual DOM trees, clicks, and form inputs. Clients can search buttons and settings even on silent recordings. || 3. Keep links public and frictionless.
+
+Don't force non-technical clients to create accounts or download 100MB files to view project walkthroughs. || 4. Mask sensitive PII instantly.
+
+Attach redactions directly to DOM elements so API keys and passwords stay hidden even when the page scrolls. || 5. Let AI answer the questions.
+
+Give clients a search bar that jumps straight to the exact timestamp of any feature demo.
+
+2026-09-21 10:06:07 UTC,single,"Traditional screen recorders only search spoken audio. If you didn't say it out loud, their AI is completely blind to it.
+
+Demoly indexes the actual browser DOM and visual UI states so you can search clicks, forms, and code instantly.
+

@@ -19,6 +19,7 @@ from src.config import (
     DEMOLY_FAQ_PATH,
     PUBLISHED_CSV_PATH,
     TOPICS_BANK_PATH,
+    AccountConfig,
 )
 from src.gemini_client import GeminiClient, GeneratedPostModel
 from src.trend_fetcher import (
@@ -217,6 +218,7 @@ def generate_post(
     planned_rationale: Optional[str] = None,
     cached_trends: Optional[str] = None,
     cached_hashtags: Optional[str] = None,
+    account: Optional[AccountConfig] = None,
 ) -> GeneratedPostModel:
     """
     Reads the style guide and generates either a single post or a thread.
@@ -231,6 +233,7 @@ def generate_post(
         planned_rationale: Strategic context for why this post was chosen
         cached_trends: Pre-fetched tech trends context to avoid duplicate network calls
         cached_hashtags: Pre-fetched trending hashtags to avoid duplicate network calls
+        account: Target AccountConfig containing persona, voice, and audience details
     """
     style_guide = load_style_guide()
     knowledge_base = load_knowledge_base()
@@ -275,6 +278,10 @@ def generate_post(
         content_type_preference=content_type_preference,
     )
 
+    # Inject account persona and tone instructions if specified
+    if account:
+        formatted_prompt += f"\n\nACCOUNT VOICE & PERSONA INSTRUCTIONS:\n- Account: {account.name}\n- Persona / Tone: {account.persona or 'Tech builder & founder'}\n- Target Audience: {account.target_audience or 'Builders, developers, and founders'}\nMake sure your phrasing, hook style, and vocabulary reflect this unique persona."
+
     # Inject planned strategic topic if specified by the daily planner
     if planned_focus_topic:
         formatted_prompt += f"\n\nTARGETED STRATEGIC OBJECTIVE FOR THIS RUN:\n- Primary Topic / Angle: {planned_focus_topic}"
@@ -308,10 +315,12 @@ def generate_planned_post(
     gemini_client: Optional[GeminiClient] = None,
     cached_trends: Optional[str] = None,
     cached_hashtags: Optional[str] = None,
+    account: Optional[AccountConfig] = None,
 ) -> GeneratedPostModel:
     """
     Generates a single post or thread following a PostPlanItem from DailyCadencePlan.
-    Supports both catalog-asset media posts and Gemini AI-generated image posts.
+    Supports both catalog-asset media posts and Gemini AI-generated image posts,
+    tailored to a specific AccountConfig persona.
     """
     allow_media = True if plan_item.format == "media" else False
 
@@ -330,6 +339,7 @@ def generate_planned_post(
         planned_rationale=plan_item.source_rationale,
         cached_trends=cached_trends,
         cached_hashtags=cached_hashtags,
+        account=account,
     )
 
     # If this is an AI-generated image post, generate and attach the image now

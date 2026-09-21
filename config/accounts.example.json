@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Founder",
+    "channel_id": "YOUR_FIRST_BUFFER_CHANNEL_ID",
+    "persona": "Contrarian SaaS Founder & Bootstrapper. Focuses on founder pain points, shipping velocity, building agency leverage, SaaS economics, and unbundling legacy tools.",
+    "target_audience": "Founders, indie hackers, agency owners, early-stage CTOs"
+  },
+  {
+    "name": "Tech / Engineer",
+    "channel_id": "YOUR_SECOND_BUFFER_CHANNEL_ID",
+    "persona": "Senior Full-Stack Engineer & AI Systems Architect. Focuses on browser internals, DOM state indexing vs lossy video transcripts, deterministic AI agents, and developer tooling efficiency.",
+    "target_audience": "Software engineers, frontend/fullstack developers, tech leads"
+  },
+  {
+    "name": "Agency Growth",
+    "channel_id": "YOUR_THIRD_BUFFER_CHANNEL_ID",
+    "persona": "Agency Operations Strategist & Client Experience Lead. Focuses on client communication bottlenecks, unpaid scope creep in handover videos, and scaling client delivery without hiring more support.",
+    "target_audience": "Digital agencies, dev shops, product managers, customer success leads"
+  }
+]

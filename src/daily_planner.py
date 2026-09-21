@@ -24,6 +24,7 @@ from src.config import (
     TOPICS_BANK_PATH,
     DEMOLY_FAQ_PATH,
     PUBLISHED_CSV_PATH,
+    AccountConfig,
 )
 from src.gemini_client import GeminiClient
 from src.trend_fetcher import (
@@ -111,17 +112,43 @@ Return strictly valid JSON matching the DailyCadencePlan schema.
 """
 
 
-def plan_daily_cadence(gemini_client: Optional[GeminiClient] = None) -> DailyCadencePlan:
+def plan_daily_cadence(
+    gemini_client: Optional[GeminiClient] = None,
+    account: Optional[AccountConfig] = None,
+    batch_excluded_topics: Optional[List[str]] = None,
+) -> DailyCadencePlan:
     """
     Analyzes live trends, available assets, and recent posts to construct
     an optimized 3-post daily cadence plan.
+    Supports multi-account personas and batch-level topic deduplication.
     """
-    print("\n[Daily Planner] Analyzing live trends, assets, and topic bank...")
+    acct_label = f" for account '{account.name}'" if account else ""
+    print(f"\n[Daily Planner] Analyzing live trends, assets, and topic bank{acct_label}...")
     realtime_trends = get_realtime_trending_context()
     trending_hashtags = get_realtime_trending_hashtags()
     recent_posts = load_recent_published_posts(limit=8)
     topic_inspiration = load_topic_inspiration(limit=8)
     available_media = format_media_catalog_for_prompt()
+
+    account_prompt_section = ""
+    if account:
+        account_prompt_section = f"""
+TARGET ACCOUNT PROFILE:
+- Account Name/Handle: {account.name}
+- Unique Persona & Voice: {account.persona or 'Tech founder and software builder'}
+- Primary Audience: {account.target_audience or 'Tech builders and founders'}
+RULE: Ensure today's 3 posts are tailored specifically for this account's unique persona and audience.
+"""
+
+    dedup_prompt_section = ""
+    if batch_excluded_topics:
+        excluded_list_str = "\n".join(f"- {t}" for t in batch_excluded_topics)
+        dedup_prompt_section = f"""
+STRICT CROSS-ACCOUNT DEDUPLICATION RULE:
+The following topics have ALREADY been assigned to other accounts today:
+{excluded_list_str}
+You MUST pick completely DIFFERENT topics, trends, and angles so that this account has 100% unique, non-overlapping content!
+"""
 
     user_prompt = f"""
 LIVE REAL-TIME TECH TRENDS TODAY:
@@ -138,7 +165,8 @@ RECENTLY PUBLISHED POSTS (DO NOT REPEAT):
 
 TOPIC BANK CANDIDATES FOR INSPIRATION:
 {topic_inspiration}
-
+{account_prompt_section}
+{dedup_prompt_section}
 Create today's 3-post strategy plan now according to the planning rules.
 """
 

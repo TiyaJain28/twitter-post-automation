@@ -155,12 +155,16 @@ class BufferClient:
         mode: str = "addToQueue",
         due_at: Optional[str] = None,
         media_url: Optional[str] = None,
+        channel_id: Optional[str] = None,
     ) -> Dict[str, Any]:
         """
         Creates a single post in Buffer for the configured channel.
         Modes: 'addToQueue' (default), 'shareNow', or 'customScheduled' (when due_at is provided).
         """
         validate_buffer_config()
+        target_channel = channel_id or self.channel_id
+        if not target_channel:
+            raise ValueError("[BUFFER ERROR] No channel_id provided for single post.")
 
         mutation = """
         mutation CreatePost($input: CreatePostInput!) {
@@ -180,7 +184,7 @@ class BufferClient:
         """
 
         input_data = {
-            "channelId": self.channel_id,
+            "channelId": target_channel,
             "text": text,
             "schedulingType": "automatic",
             "mode": mode,
@@ -212,11 +216,16 @@ class BufferClient:
         mode: str = "addToQueue",
         due_at: Optional[str] = None,
         media_url: Optional[str] = None,
+        channel_id: Optional[str] = None,
     ) -> Dict[str, Any]:
         """
-        Creates a Twitter thread in Buffer using metadata.twitter.thread.
+        Creates a native multi-post thread on X via Buffer GraphQL API.
+        Twitter threads require setting metadata.twitter.thread array.
         """
         validate_buffer_config()
+        target_channel = channel_id or self.channel_id
+        if not target_channel:
+            raise ValueError("[BUFFER ERROR] No channel_id provided for thread.")
 
         if not posts:
             raise ValueError("[BUFFER THREAD ERROR] Cannot publish empty thread.")
@@ -242,7 +251,7 @@ class BufferClient:
         thread_entries = [{"text": p} for p in posts]
 
         input_data = {
-            "channelId": self.channel_id,
+            "channelId": target_channel,
             "text": posts[0],  # Root post must match top-level text
             "schedulingType": "automatic",
             "mode": mode,
