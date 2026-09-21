@@ -1,0 +1,490 @@
+[
+  {
+    "id": "img_1",
+    "filename": "Screenshot 2026-09-18 140710.png",
+    "type": "image",
+    "file_size_kb": 132.2,
+    "summary": "This landing page screenshot showcases Demoly's hero section, highlighting its core capability to record handover videos and let AI answer client queries by indexing video frames and actions.",
+    "capabilities": [
+      "AI-powered query answering for client videos",
+      "Video frame and action indexing",
+      "Zero-friction client handoff workflows"
+    ],
+    "recommended_hook_angle": "Stop wasting time explaining the same client handover video twice—here is how Demoly lets AI instantly answer their questions for you."
+  },
+  {
+    "id": "img_2",
+    "filename": "Screenshot 2026-09-18 140750.png",
+    "type": "image",
+    "file_size_kb": 211.3,
+    "summary": "This screenshot displays the Demoly landing page highlighting its secure screen recording features, specifically focusing on the ability to permanently redact and blur sensitive data on the video frame layer.",
+    "capabilities": [
+      "Security & Privacy",
+      "Redact sensitive data",
+      "Permanent canvas removal",
+      "Custom blur regions"
+    ],
+    "recommended_hook_angle": "Never leak sensitive API keys or customer data in client walkthroughs again—here is how Demoly permanently removes sensitive regions from the video frame layer."
+  },
+  {
+    "id": "img_3",
+    "filename": "Screenshot 2026-09-18 140801.png",
+    "type": "image",
+    "file_size_kb": 161.0,
+    "summary": "This screenshot showcases Demoly's landing page highlighting its 'Precision Editing' feature, specifically the non-destructive timeline trimmer that allows users to edit out mistakes without re-recording.",
+    "capabilities": [
+      "Precision Editing",
+      "Non-destructive timeline trimming",
+      "Video cutting and slicing"
+    ],
+    "recommended_hook_angle": "Stop re-recording your entire product video just because of one tiny slip-up. Here's how to fix it in seconds with non-destructive timeline editing."
+  },
+  {
+    "id": "img_4",
+    "filename": "Screenshot 2026-09-18 140814.png",
+    "type": "image",
+    "file_size_kb": 213.0,
+    "summary": "This screenshot showcases Demoly's Deep AI indexing and global translation feature, highlighting automated speech and action transcription alongside a video walkthrough interface.",
+    "capabilities": [
+      "AI indexing and translation",
+      "Real-time transcription",
+      "Timestamp navigation",
+      "Multilingual support"
+    ],
+    "recommended_hook_angle": "Never waste time translating product walkthroughs manually again—see how Demoly indexes silent clicks and spoken words instantly in 30+ languages."
+  },
+  {
+    "id": "img_5",
+    "filename": "Screenshot 2026-09-18 140825.png",
+    "type": "image",
+    "file_size_kb": 179.3,
+    "summary": "This landing page screenshot highlights Demoly's interactive walkthrough feature for pinning comments to exact DOM elements and video frames.",
+    "capabilities": [
+      "Interactive walkthroughs",
+      "Pin comments to DOM elements",
+      "Live tab links",
+      "Pixel-perfect HD zoom"
+    ],
+    "recommended_hook_angle": "Tired of pointing at vague regions in screen recordings? Here is how to pin comments directly to exact DOM elements."
+  },
+  {
+    "id": "img_6",
+    "filename": "Screenshot 2026-09-18 140837.png",
+    "type": "image",
+    "file_size_kb": 153.4,
+    "summary": "The Demoly landing page highlighting AI visual and audio search capabilities to instantly jump to exact moments in video recordings.",
+    "capabilities": [
+      "AI visual and audio search",
+      "Natural language querying",
+      "Video indexing of screen actions and speech"
+    ],
+    "recommended_hook_angle": "Stop wasting time scrubbing through hours of screen recordings—just type what you're looking for and let AI jump straight to the exact frame."
+  },
+  {
+    "id": "img_7",
+    "filename": "Screenshot 2026-09-18 140847.png",
+    "type": "image",
+    "file_size_kb": 126.4,
+    "summary": "This screenshot showcases Demoly's AI search capability, highlighting how the tool automatically indexes video recordings to let users instantly jump to exact moments based on user actions.",
+    "capabilities": [
+      "AI search",
+      "Instant timestamp navigation",
+      "Video playback controls",
+      "Dashboard recording viewer"
+    ],
+    "recommended_hook_angle": "Never waste time scrubbing through long screen recordings again—Demoly's AI lets you jump straight to the exact second an action happened."
+  },
+  {
+    "id": "img_8",
+    "filename": "Screenshot 2026-09-18 140858.png",
+    "type": "image",
+    "file_size_kb": 143.2,
+    "summary": "The image shows a Demoly landing page feature demonstration illustrating AI-generated step-by-step instructions with clickable timecodes derived from video recordings.",
+    "capabilities": [
+      "AI answers with steps",
+      "Clickable timecodes",
+      "Visual & Voice AI indexing",
+      "Unspoken Action Search"
+    ],
+    "recommended_hook_angle": "Stop scrubbing through hour-long video recordings just to find one button—watch how AI turns screen grabs into clickable, step-by-step text guides instantly."
+  },
+  {
+    "id": "img_9",
+    "filename": "Screenshot 2026-09-18 140912.png",
+    "type": "image",
+    "file_size_kb": 70.7,
+    "summary": "A Demoly landing page section outlining the workflow steps from initial recording to client delivery, including timestamps for recording, redacting, sending, and AI Q&A.",
+    "capabilities": [
+      "Workflow timeline",
+      "Screen recording",
+      "Blur and trim redacting",
+      "Client sharing",
+      "AI indexing and Q&A"
+    ],
+    "recommended_hook_angle": "Here is how Demoly takes you from your first take to a client-ready answer in four simple steps."
+  },
+  {
+    "id": "img_10",
+    "filename": "Screenshot 2026-09-18 140925.png",
+    "type": "image",
+    "file_size_kb": 140.1,
+    "summary": "A Demoly landing page highlighting solutions for two main teams: client handoff for agencies and tech companies, and instant bug reporting for internal teams.",
+    "capabilities": [
+      "Client handoff",
+      "Instant bug reporting",
+      "Self-serve walkthrough package",
+      "DOM element pinpoints",
+      "Visual AI indexes"
+    ],
+    "recommended_hook_angle": "Built for how work actually moves: streamline client handoffs and instant bug reporting with Demoly."
+  },
+  {
+    "id": "vid_11",
+    "filename": "Demoly Tutorial #1_ Introduction & How to Log In _ Getting Started with Demoly.mp4",
+    "type": "video",
+    "file_size_kb": 2883.8,
+    "summary": "This video introduces Demoly and demonstrates how to log in to access the dashboard and recording workspace.",
+    "capabilities": [
+      "Login & Authentication",
+      "Demoly Dashboard Overview"
+    ],
+    "recommended_hook_angle": "Tired of answering 'where did you explain that?' Hand over screen recordings that clients can actually search through. Here's how to log in and get started with Demoly:"
+  },
+  {
+    "id": "vid_12",
+    "filename": "Demoly Tutorial #2_ How to Record a Video on Demoly _ Screen Recording Guide.mp4",
+    "type": "video",
+    "file_size_kb": 2466.8,
+    "summary": "This tutorial video demonstrates how to install the Demoly Chrome extension and record screen walkthroughs for product demonstrations.",
+    "capabilities": [
+      "Chrome extension installation",
+      "Screen recording controls",
+      "Workspace management",
+      "Video library and processing"
+    ],
+    "recommended_hook_angle": "Want to record quick product walkthroughs or bug reports in seconds? Here's how to use Demoly's screen recording extension."
+  },
+  {
+    "id": "vid_13",
+    "filename": "Demoly Tutorial #3_ How to Edit Recordings _ Trim, Blur, Redact & More (1).mp4",
+    "type": "video",
+    "file_size_kb": 2938.8,
+    "summary": "This tutorial video demonstrates how to edit Demoly video recordings using trim, split, redact, and blur tools.",
+    "capabilities": [
+      "Video Trimming",
+      "Text Redaction",
+      "Content Blurring",
+      "Split Clips"
+    ],
+    "recommended_hook_angle": "Need to remove sensitive info or trim your product demos? Here is how easy it is to edit recordings right inside Demoly."
+  },
+  {
+    "id": "vid_14",
+    "filename": "Demoly Tutorial #4_ Projects, Folders & Sharing _ Organize Your Recordings.mp4",
+    "type": "video",
+    "file_size_kb": 2355.1,
+    "summary": "This tutorial video demonstrates how to create and organize projects and folders within Demoly, as well as how to share the entire project via a link.",
+    "capabilities": [
+      "Project creation",
+      "Folder management",
+      "Project sharing via link"
+    ],
+    "recommended_hook_angle": "Learn how to easily organize your video recordings into projects and folders in Demoly."
+  },
+  {
+    "id": "vid_15",
+    "filename": "Demoly Tutorial #5_ Record in a Project & Move Existing Recordings _ Demoly Guide.mp4",
+    "type": "video",
+    "file_size_kb": 3448.4,
+    "summary": "This video tutorial demonstrates how to record a new screen capture directly into a specific Demoly project and how to move existing recordings between projects.",
+    "capabilities": [
+      "Project-specific recording",
+      "Recording management",
+      "Move recordings between projects"
+    ],
+    "recommended_hook_angle": "Want to keep your screen recordings organized from the start? Here's how to record directly into a specific project or move existing videos in Demoly."
+  },
+  {
+    "id": "vid_16",
+    "filename": "Demoly Tutorial #6_ How to Use AI Search _ Find Anything in Your Recordings.mp4",
+    "type": "video",
+    "file_size_kb": 2662.1,
+    "summary": "A demonstration of using the AI search feature within Demoly to quickly query and find specific information inside recorded browser sessions.",
+    "capabilities": [
+      "Ask Demoly AI Search",
+      "Transcript and Recording Q&A",
+      "Timestamp Citation"
+    ],
+    "recommended_hook_angle": "Tired of scrubbing through long video recordings to find one specific moment? Demoly's AI search lets you just ask a question and find it instantly."
+  },
+  {
+    "id": "vid_17",
+    "filename": "Demoly Tutorial #7_ How to Comment on a Recording _ Collaborate & Share Feedback.mp4",
+    "type": "video",
+    "file_size_kb": 2017.9,
+    "summary": "This video tutorial demonstrates how to leave timestamped comments on a Demoly recording to collaborate and share feedback with clients.",
+    "capabilities": [
+      "Timestamped video comments",
+      "Client feedback collaboration",
+      "Recording replay annotations"
+    ],
+    "recommended_hook_angle": "Say goodbye to endless feedback loops—here is how clients can leave timestamped comments directly on your Demoly recordings."
+  },
+  {
+    "id": "vid_18",
+    "filename": "Demoly Tutorial #8_ How to Add Team Members to Your Workspace _ Team Collaboration.mp4",
+    "type": "video",
+    "file_size_kb": 1192.1,
+    "summary": "The video demonstrates how to invite and manage team members within a workspace in Demoly.",
+    "capabilities": [
+      "Team collaboration",
+      "Workspace member invitation",
+      "Role assignment (Viewer, Creator, Admin)"
+    ],
+    "recommended_hook_angle": "Need to collaborate on video demos with your team? Here's how to add members and assign roles in Demoly."
+  },
+  {
+    "id": "img_19",
+    "filename": "img1.png",
+    "type": "image",
+    "file_size_kb": 1155.4,
+    "summary": "This screenshot displays the Demoly landing page highlighting its Precision Editing feature, showcasing an in-browser video editor timeline interface used for non-destructive trimming and redaction.",
+    "capabilities": [
+      "Precision Editing",
+      "Non-destructive editing",
+      "Cut out long pauses",
+      "Keep original recording",
+      "Video timeline trimming",
+      "Redact and Blur tools"
+    ],
+    "recommended_hook_angle": "Made a tiny mistake in your product walkthrough? Stop re-recording the whole 10 minutes—just trim it out directly in your browser."
+  },
+  {
+    "id": "img_20",
+    "filename": "img10.png",
+    "type": "image",
+    "file_size_kb": 1333.6,
+    "summary": "This image displays the Demoly landing page featuring a value proposition alongside a product UI preview showing a virtual meeting recording with AI-generated summaries, key takeaways, and action items.",
+    "capabilities": [
+      "Landing page overview",
+      "AI meeting summaries",
+      "Key takeaways extraction",
+      "Action items tracking",
+      "Speaker insights",
+      "Multilingual support",
+      "Video recording playback with chapter navigation"
+    ],
+    "recommended_hook_angle": "Turn every conversation into instant action items and clear summaries automatically."
+  },
+  {
+    "id": "img_21",
+    "filename": "img11.png",
+    "type": "image",
+    "file_size_kb": 974.8,
+    "summary": "The image shows the Demoly landing page highlighting AI-powered client handover video recording and search features.",
+    "capabilities": [
+      "AI search for video frames and actions",
+      "Client handover video recording",
+      "Instant context-rich bug reporting"
+    ],
+    "recommended_hook_angle": "Stop wasting time explaining the same things to clients over and over—let AI answer their questions from your handover videos."
+  },
+  {
+    "id": "img_22",
+    "filename": "img12.png",
+    "type": "image",
+    "file_size_kb": 968.8,
+    "summary": "This dashboard view of a SaaS application named Orbit displays key performance metrics such as monthly revenue, active users, API calls, and recent signups alongside revenue charts.",
+    "capabilities": [
+      "KPI Metrics Overview",
+      "Revenue Analytics Chart",
+      "Recent Signups Table",
+      "Workspace Management",
+      "Developer API and Webhooks Settings"
+    ],
+    "recommended_hook_angle": "Track all your core SaaS metrics in one clean dashboard. Here is how Orbit keeps your revenue, active users, and API calls front and center."
+  },
+  {
+    "id": "img_23",
+    "filename": "img13.png",
+    "type": "image",
+    "file_size_kb": 1153.7,
+    "summary": "This image shows the Demoly landing page highlighting its secure screen recording and privacy-first redaction capabilities for professional delivery.",
+    "capabilities": [
+      "Security & Privacy",
+      "Permanent canvas removal",
+      "Custom blur regions for sensitive dashboards",
+      "Redaction of confidential data"
+    ],
+    "recommended_hook_angle": "Never leak sensitive data in a screen recording again. Here is how you can permanently redact confidential info straight from the video frame."
+  },
+  {
+    "id": "img_24",
+    "filename": "img14.png",
+    "type": "image",
+    "file_size_kb": 1056.8,
+    "summary": "Demoly's precision editing interface allowing users to trim slip-ups, cut awkward pauses, and edit recorded walkthroughs without re-recording.",
+    "capabilities": [
+      "Non-destructive timeline trimming",
+      "Precision editing controls",
+      "Browser-based video editing"
+    ],
+    "recommended_hook_angle": "Made a tiny mistake in your product walkthrough? Stop re-recording the whole 10 minutes—just trim it out directly in your browser."
+  },
+  {
+    "id": "img_25",
+    "filename": "img15.png",
+    "type": "image",
+    "file_size_kb": 1175.1,
+    "summary": "This landing page screenshot highlights Demoly's Deep AI indexing and global translation capabilities, featuring an interactive product dashboard with real-time transcript translation and search tools.",
+    "capabilities": [
+      "Deep AI indexing",
+      "Global translation",
+      "Visual action and speech indexing",
+      "Interactive transcript navigation"
+    ],
+    "recommended_hook_angle": "Want your product walkthroughs to speak 30+ languages instantly? Here is how Demoly's Deep AI indexing and global translation work in real-time."
+  },
+  {
+    "id": "img_26",
+    "filename": "img16.png",
+    "type": "image",
+    "file_size_kb": 1178.2,
+    "summary": "This landing page screenshot showcases Demoly's interactive walkthrough feature, highlighting precise frame-by-frame DOM element commenting and annotation capabilities.",
+    "capabilities": [
+      "Pin comments to specific DOM elements",
+      "Copy live tab links straight from recordings",
+      "Copy text directly out of video frames",
+      "Pixel-perfect HD zoom"
+    ],
+    "recommended_hook_angle": "Stop guessing which button your client is talking about—pin comments directly to the exact DOM element frame by frame."
+  },
+  {
+    "id": "img_27",
+    "filename": "img17.png",
+    "type": "image",
+    "file_size_kb": 942.4,
+    "summary": "This screenshot displays the Demoly landing page highlighting the streamlined 4-step workflow from recording to AI-powered client Q&A.",
+    "capabilities": [
+      "Recording walkthroughs",
+      "Redacting and trimming sensitive areas",
+      "Sharing links and project packages",
+      "AI-powered index search for voice and actions"
+    ],
+    "recommended_hook_angle": "See how Demoly takes you from first take to client answer in four simple steps."
+  },
+  {
+    "id": "img_28",
+    "filename": "img18.png",
+    "type": "image",
+    "file_size_kb": 1090.8,
+    "summary": "The Demoly user dashboard showing workspace analytics (recordings, projects, views) and recently recorded browser walkthroughs with privacy and sharing labels.",
+    "capabilities": [
+      "Dashboard overview of recordings, projects, and views",
+      "Video management and playback time indicators",
+      "Workspace privacy controls (Public vs. Workspace)",
+      "Project organization and handover tracking"
+    ],
+    "recommended_hook_angle": "Keep all your client demos and walkthrough recordings organized in one clean dashboard with Demoly."
+  },
+  {
+    "id": "img_29",
+    "filename": "img19.png",
+    "type": "image",
+    "file_size_kb": 977.2,
+    "summary": "This screenshot displays the Demoly post-recording editor interface showing timeline navigation, video trimming, and editing tools for recorded browser demos.",
+    "capabilities": [
+      "Timeline scrubbing and video trimming",
+      "Text and blur annotation tools",
+      "Multi-step recording management"
+    ],
+    "recommended_hook_angle": "Recorded a clunky walkthrough video? Here is how Demoly lets you edit browser demos right on the timeline just like text."
+  },
+  {
+    "id": "img_30",
+    "filename": "img2.png",
+    "type": "image",
+    "file_size_kb": 1183.1,
+    "summary": "This landing page hero section illustrates Demoly's 4-step workflow: Record, Redact & trim, Send, and Ask AI.",
+    "capabilities": [
+      "Browser recording",
+      "Sensitive data redaction and blurring",
+      "Secure link sharing with project packaging",
+      "AI-powered interactive Q&A and video indexing"
+    ],
+    "recommended_hook_angle": "From screen recording to client answer in seconds—see how Demoly streamlines the entire walkthrough-to-handover workflow."
+  },
+  {
+    "id": "img_31",
+    "filename": "img3.png",
+    "type": "image",
+    "file_size_kb": 1241.2,
+    "summary": "Demoly landing page featuring a redacting tool demonstration with interactive blur and masking capabilities for sensitive data removal.",
+    "capabilities": [
+      "Redact anything sensitive",
+      "Permanent canvas removal",
+      "Custom blur regions",
+      "Safe for clients"
+    ],
+    "recommended_hook_angle": "Never leak client data or internal APIs in your screen recordings again—here's how Demoly permanently redacts sensitive info right on the canvas."
+  },
+  {
+    "id": "img_32",
+    "filename": "img4.png",
+    "type": "image",
+    "file_size_kb": 1241.6,
+    "summary": "This landing page showcases Demoly's AI-powered handover video platform featuring an analytics dashboard for Northwind Labs alongside core value propositions like zero-card signup and AI client query responses.",
+    "capabilities": [
+      "AI-powered client query answers",
+      "Video frame and action indexing",
+      "Northwind Labs analytics dashboard",
+      "Recent signups tracking",
+      "API and revenue metrics"
+    ],
+    "recommended_hook_angle": "Stop recording endless explanations—let AI answer your clients' handover questions right from the exact video frame."
+  },
+  {
+    "id": "img_33",
+    "filename": "img7.png",
+    "type": "image",
+    "file_size_kb": 1290.4,
+    "summary": "This asset displays the Demoly landing page hero section alongside an interactive dashboard screenshot showing the 'Share Project' one-click sharing modal and supported export integrations.",
+    "capabilities": [
+      "Share with a link",
+      "Collaborate with your team",
+      "Embed anywhere",
+      "Export clips"
+    ],
+    "recommended_hook_angle": "Stop wasting time on endless follow-up meetings—turn your screen recordings into instant shared knowledge with just one click."
+  },
+  {
+    "id": "img_34",
+    "filename": "img8.png",
+    "type": "image",
+    "file_size_kb": 1298.8,
+    "summary": "This landing page screenshot showcases Demoly's AI-powered semantic search interface, demonstrating how users can locate exact moments, code snippets, or UI elements across all video recordings instantly.",
+    "capabilities": [
+      "AI Search",
+      "Natural language queries",
+      "Video transcription index",
+      "Filter by Clicks, Code, Speech, Text, and UI Elements",
+      "Timestamped search results"
+    ],
+    "recommended_hook_angle": "Stop rewatching 40-minute loom recordings. Just type what you're looking for and jump straight to the exact second it happened."
+  },
+  {
+    "id": "img_35",
+    "filename": "img9.png",
+    "type": "image",
+    "file_size_kb": 1260.9,
+    "summary": "This landing page screenshot showcases Demoly's built-in editing features including trimming, blurring sensitive information, adding text and callouts, and auto-formatting.",
+    "capabilities": [
+      "Trim & cut",
+      "Blur sensitive info",
+      "Add text & callouts",
+      "Auto format",
+      "Built-in video editor"
+    ],
+    "recommended_hook_angle": "Want to turn messy screen recordings into clean, professional product demos in just minutes without endless editing?"
+  }
+]

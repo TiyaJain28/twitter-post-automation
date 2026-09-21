@@ -1,0 +1,902 @@
+[
+  {
+    "id": 1,
+    "category": "Category 1: Origin & Agency Problem",
+    "faq_ref": "FAQ Q1 & Q8",
+    "topic": "The 2 to 4 hours lost weekly per team member to repeat client support calls",
+    "angle": "Agency founder math on billable hours wasted answering questions already recorded.",
+    "hook_seed": "Tech agencies lose 2 to 4 hours per team member every week answering questions already recorded in client handover videos.",
+    "thread_focus": "Show the real cost of 15-minute syncs across a 15-person agency team and how interactive video eliminates the tax."
+  },
+  {
+    "id": 2,
+    "category": "Category 1: Origin & Agency Problem",
+    "faq_ref": "FAQ Q1 & Q4",
+    "topic": "Why clients refuse to watch 10-minute handover walkthroughs",
+    "angle": "Psychology of video friction: clients want instant 10-second answers, not scrubbing timelines.",
+    "hook_seed": "Nobody at a client organization has time to watch a 10-minute video to find a 10-second button. Here is what happens instead:",
+    "thread_focus": "Contrast passive video scrubbing with typing a question into a video search bar."
+  },
+  {
+    "id": 3,
+    "category": "Category 1: Origin & Agency Problem",
+    "faq_ref": "FAQ Q1",
+    "topic": "The 45-video enterprise law firm handover disaster (Creative Pie story)",
+    "angle": "Founder origin story: 45 videos uploaded, 12 meeting requests received within 7 days.",
+    "hook_seed": "We delivered 45 walkthrough videos for an enterprise law firm client. Within 7 days, we got 12 meeting requests asking about things we literally recorded. That's why we built Demoly.",
+    "thread_focus": "Walk through the Creative Pie agency origin story and the realization that videos must answer questions autonomously."
+  },
+  {
+    "id": 4,
+    "category": "Category 1: Origin & Agency Problem",
+    "faq_ref": "FAQ Q3",
+    "topic": "Loom's transcript-only search blind spot",
+    "angle": "If you never said 'logout' on camera, Loom can't find the logout button.",
+    "hook_seed": "Loom searches your words. Demoly searches your screen. Here is why that difference costs agencies dozens of hours:",
+    "thread_focus": "Explain how audio transcript indexing leaves silent visual actions completely unsearchable."
+  },
+  {
+    "id": 5,
+    "category": "Category 1: Origin & Agency Problem",
+    "faq_ref": "FAQ Q4",
+    "topic": "Google Drive 100MB streaming failure and client download friction",
+    "angle": "Clients hate downloading 500MB MP4 files just to see how to invite a team member.",
+    "hook_seed": "Stop putting client handover videos in Google Drive folders. Drive fails to stream files over 100MB directly in browser, and Gemini only reads spoken audio.",
+    "thread_focus": "Break down why Google Drive video folders alienate non-technical stakeholders."
+  },
+  {
+    "id": 6,
+    "category": "Category 1: Origin & Agency Problem",
+    "faq_ref": "FAQ Q5",
+    "topic": "Why written software manuals alone will never solve the handover problem",
+    "angle": "Manuals take 20 hours to write, go stale on the next CSS change, and clients never read them.",
+    "hook_seed": "Today, we are killing the 40-page PDF software manual that takes 20 hours to write and 0 clients to read. Here is why:",
+    "thread_focus": "Show why recording walkthroughs in 2 minutes + AI auto-generated answers is 10x more sustainable than manual docs."
+  },
+  {
+    "id": 7,
+    "category": "Category 1: Origin & Agency Problem",
+    "faq_ref": "FAQ Q6",
+    "topic": "The initial technical concept: Capturing browser DOM instead of video pixels",
+    "angle": "Web software has static frames. DOM state changes shrink file size and make state searchable.",
+    "hook_seed": "A screen recorder that captures the browser DOM instead of video pixels sounds weird until you look at the architecture. Here is why it changes everything:",
+    "thread_focus": "Deep-dive into the architectural difference between 60fps pixel streaming and DOM hierarchy capture."
+  },
+  {
+    "id": 8,
+    "category": "Category 1: Origin & Agency Problem",
+    "faq_ref": "FAQ Q7",
+    "topic": "When 'Talk to the Video' AI search was born",
+    "angle": "All product answers already exist in the footage; conversational AI turns footage into an interactive assistant.",
+    "hook_seed": "The moment we realized recorded videos shouldn't be passive MP4 files: when clients kept scheduling calls to ask what was already on screen.",
+    "thread_focus": "Explain the birth of conversational video search where the video acts as an interactive client support agent."
+  },
+  {
+    "id": 9,
+    "category": "Category 1: Origin & Agency Problem",
+    "faq_ref": "FAQ Q10",
+    "topic": "Why Demoly deliberately refuses to record your desktop OS or mobile screen",
+    "angle": "Browser-only focus is a superpower: enables DOM trees, network logs, and deep inspection.",
+    "hook_seed": "A screen recorder that refuses to record your desktop OS is not broken—it's by design. Here is the engineering decision behind Demoly:",
+    "thread_focus": "Explain why desktop pixel capture dilutes AI search into a dumb recorder, whereas browser DOM provides 100% intelligence."
+  },
+  {
+    "id": 10,
+    "category": "Category 1: Origin & Agency Problem",
+    "faq_ref": "FAQ Q11",
+    "topic": "The fundamental insight competitors missed about tech agency handovers",
+    "angle": "Competitors treat recording as generic pixel capture. Agencies need deep web context and DOM search.",
+    "hook_seed": "Loom thinks screen recording is about sending quick video messages. For tech agencies delivering $50k web applications, it's about product knowledge transfer.",
+    "thread_focus": "Contrast casual video messaging with enterprise web application handovers."
+  },
+  {
+    "id": 11,
+    "category": "Category 2: Product Positioning & Value",
+    "faq_ref": "FAQ Q12 & Q14",
+    "topic": "Demoly's unified category: Client Handoff + Visual Bug Reporting + AI Documentation",
+    "angle": "Combining three fragmented agency workflows into one unified Chrome extension.",
+    "hook_seed": "Why does your agency use one tool for client demos, another for QA screenshots, and a third for written docs? Here is how to unify them:",
+    "thread_focus": "Demonstrate how one recording serves as client training, QA bug report, and auto-generated SOP."
+  },
+  {
+    "id": 12,
+    "category": "Category 2: Product Positioning & Value",
+    "faq_ref": "FAQ Q15",
+    "topic": "The 4 traditional agency tools Demoly completely replaces",
+    "angle": "Loom, Google Drive, ad-hoc support calls, and fragmented screenshot bug tools.",
+    "hook_seed": "How many tools does your agency pay for just to explain and test web applications? Here is how Demoly replaces 4 of them in one link:",
+    "thread_focus": "Break down cost and context savings from cutting Loom, Drive, and screenshot tools."
+  },
+  {
+    "id": 13,
+    "category": "Category 2: Product Positioning & Value",
+    "faq_ref": "FAQ Q16 & Q99",
+    "topic": "The MCP Server: Feeding browser bug recordings directly into Cursor and Claude Code",
+    "angle": "Autonomous debugging: QA records bug -> MCP feeds DOM + error logs to AI coding agent.",
+    "hook_seed": "The future of software testing isn't writing manual Jira repro steps. It's an MCP server that feeds browser DOM states directly into Claude Code.",
+    "thread_focus": "Explain how Demoly's Model Context Protocol server connects visual bug recordings to AI agents."
+  },
+  {
+    "id": 14,
+    "category": "Category 2: Product Positioning & Value",
+    "faq_ref": "FAQ Q18 & Q19",
+    "topic": "From simplest workflow to most powerful: Cross-video search across 50+ recordings",
+    "angle": "Ask one question and search the entire workspace video library instantly.",
+    "hook_seed": "Imagine delivering 50 videos for an enterprise client, and the client can ask ONE question in a search bar to jump to the exact second across the entire library.",
+    "thread_focus": "Show the progression from a 1-click single recording to a full agency client knowledge base."
+  },
+  {
+    "id": 15,
+    "category": "Category 2: Product Positioning & Value",
+    "faq_ref": "FAQ Q20",
+    "topic": "DOM-Native Visual Search: The single feature that leaves Loom in the dust",
+    "angle": "Loom inspects words; Demoly inspects screen elements, buttons, and visual states.",
+    "hook_seed": "Loom searches your words. Demoly searches your screen. If you never said 'logout' on camera, Loom can't find the logout button.",
+    "thread_focus": "Deep explanation of how DOM inspection catches silent clicks and UI changes."
+  },
+  {
+    "id": 16,
+    "category": "Category 2: Product Positioning & Value",
+    "faq_ref": "FAQ Q21",
+    "topic": "The 'I actually need this' moment: 1-click redaction and automated answers",
+    "angle": "Masking passwords across dynamic screens + videos that answer repeat questions.",
+    "hook_seed": "The exact moment agency founders realize they can't go back to Loom: when client passwords stay masked across dynamic pages in one click.",
+    "thread_focus": "Focus on dynamic element masking and post-launch meeting relief."
+  },
+  {
+    "id": 17,
+    "category": "Category 2: Product Positioning & Value",
+    "faq_ref": "FAQ Q23",
+    "topic": "The hardest thing to explain to clients (and why it's our biggest strength)",
+    "angle": "Why Demoly records inside the browser and ignores desktop apps: DOM inspection.",
+    "hook_seed": "The hardest question we get asked: 'Why can't Demoly record my desktop Photoshop app?' The answer reveals our biggest architectural advantage.",
+    "thread_focus": "Explain how browser architecture enables deep DOM inspection and AI queries."
+  },
+  {
+    "id": 18,
+    "category": "Category 3: Target Personas & Workflows",
+    "faq_ref": "FAQ Q24 & Q25",
+    "topic": "The 4 primary personas inside a tech agency and how each uses Demoly",
+    "angle": "Product Managers, QA Engineers, Developers, and Agency Founders.",
+    "hook_seed": "How a high-performing web agency uses Demoly across 4 roles: PMs, QA, Devs, and Founders. Here is the operational workflow:",
+    "thread_focus": "Map out specific daily touchpoints for PMs (handovers), QA (bugs), Devs (fixes), and Founders (retention)."
+  },
+  {
+    "id": 19,
+    "category": "Category 3: Target Personas & Workflows",
+    "faq_ref": "FAQ Q26",
+    "topic": "Secondary personas: SaaS product teams, DevRel educators, and internal HR",
+    "angle": "Interactive product tutorials, coding walkthroughs, and employee onboarding.",
+    "hook_seed": "We built Demoly for tech agencies. Then SaaS founders and technical educators started using it for interactive tutorials. Here is why:",
+    "thread_focus": "Show how Demoly expands into interactive SaaS onboarding and searchable coding tutorials."
+  },
+  {
+    "id": 20,
+    "category": "Category 3: Target Personas & Workflows",
+    "faq_ref": "FAQ Q28",
+    "topic": "The exact step-by-step QA bug reporting workflow in Demoly",
+    "angle": "Chrome extension -> replicate bug -> pin timestamp comment -> share link with dev.",
+    "hook_seed": "How modern QA teams report web bugs in 60 seconds: 1. Click extension 2. Recreate bug 3. Pin comment to exact second 4. Share link. Zero manual tickets.",
+    "thread_focus": "Walk through the frictionless 60-second QA bug reporting workflow."
+  },
+  {
+    "id": 21,
+    "category": "Category 3: Target Personas & Workflows",
+    "faq_ref": "FAQ Q29",
+    "topic": "The exact step-by-step Client Project Handover workflow in Demoly",
+    "angle": "Project folder -> record modules -> mask credentials -> share link with embedded AI.",
+    "hook_seed": "The modern agency client handover workflow: 1. Create client folder 2. Record feature walkthroughs 3. Mask staging passwords 4. Share interactive link.",
+    "thread_focus": "Step-by-step framework of professional handover packaging that eliminates client calls."
+  },
+  {
+    "id": 22,
+    "category": "Category 3: Target Personas & Workflows",
+    "faq_ref": "FAQ Q30",
+    "topic": "How Demoly scales from a 3-person boutique studio to a 50-person enterprise agency",
+    "angle": "Founder-led handovers to segregated client workspaces with role-based permissions.",
+    "hook_seed": "How agency operations change from 3 people to 50 people: moving from ad-hoc Slack links to organized client workspaces.",
+    "thread_focus": "Discuss workspace administration and agency scaling dynamics."
+  },
+  {
+    "id": 23,
+    "category": "Category 3: Target Personas & Workflows",
+    "faq_ref": "FAQ Q31",
+    "topic": "Early user feedback: Coding instructors requesting searchable video tutorials",
+    "angle": "Students querying video tutorials via AI instead of emailing instructors repeatedly.",
+    "hook_seed": "An unexpected feedback pattern from our early users: technical instructors using Demoly so students can query coding videos directly via AI.",
+    "thread_focus": "Highlight the education use-case where videos autonomously answer student questions."
+  },
+  {
+    "id": 24,
+    "category": "Category 4: Recording Capabilities",
+    "faq_ref": "FAQ Q32 & Q34",
+    "topic": "Why a Chrome extension is mandatory for true DOM intelligence",
+    "angle": "Native browser runtime access enables DOM tree, tab audio, and web events.",
+    "hook_seed": "Why install a 200MB desktop app when a lightweight Chrome extension has direct access to the browser DOM, tab audio, and web events?",
+    "thread_focus": "Explain why extension architecture is superior for web application intelligence."
+  },
+  {
+    "id": 25,
+    "category": "Category 4: Recording Capabilities",
+    "faq_ref": "FAQ Q35",
+    "topic": "Browser support today (Chrome) and the roadmap (Edge, Firefox, Brave)",
+    "angle": "Honest product boundaries: Chrome-first focus, multi-browser expansion.",
+    "hook_seed": "Demoly is built Chrome-first today. Edge, Firefox, and Brave are actively on our roadmap. Here is why browser-specific focus matters:",
+    "thread_focus": "Acknowledge product boundaries with transparency and explain future browser expansion."
+  },
+  {
+    "id": 26,
+    "category": "Category 4: Recording Capabilities",
+    "faq_ref": "FAQ Q36",
+    "topic": "Everything Demoly captures: Tabs, window, microphone, tab audio, clicks, DOM",
+    "angle": "Complete audit of audio, visual, and interaction streams.",
+    "hook_seed": "What actually happens when you hit record in Demoly? We don't just capture video pixels—we index 8 simultaneous data streams.",
+    "thread_focus": "Audit the 8 data streams: tab audio, mic, clicks, typing, cursor paths, DOM state, screenshots, and route changes."
+  },
+  {
+    "id": 27,
+    "category": "Category 4: Recording Capabilities",
+    "faq_ref": "FAQ Q37 & Q39",
+    "topic": "Seamless tab switching and page reloads during a live recording session",
+    "angle": "Extensions that crash on refresh vs Demoly's persistent session tracking.",
+    "hook_seed": "Most browser screen recorders break the second you refresh the page or open a new tab. Demoly maintains continuous DOM tracking across the entire session.",
+    "thread_focus": "Show the engineering resilience across page reloads and tab navigations."
+  },
+  {
+    "id": 28,
+    "category": "Category 4: Recording Capabilities",
+    "faq_ref": "FAQ Q43",
+    "topic": "Unlimited everything: No duration limits, no file size caps, no recording limits",
+    "angle": "Free plan includes unlimited duration and unlimited video counts.",
+    "hook_seed": "Nothing kills workflow momentum like a '5-minute recording limit reached' banner when demoing complex client software. Why Demoly offers unlimited recording:",
+    "thread_focus": "Contrast Demoly's unlimited policy with Loom's aggressive 5-minute free plan paywall."
+  },
+  {
+    "id": 29,
+    "category": "Category 4: Recording Capabilities",
+    "faq_ref": "FAQ Q44",
+    "topic": "Product boundaries: Pause/resume coming soon; cancel without saving live today",
+    "angle": "Transparent communication on V1 boundaries and upcoming UX upgrades.",
+    "hook_seed": "Honest product engineering: Demoly supports instant cancel in V1, with pause/resume actively in development. Why transparent boundaries build trust:",
+    "thread_focus": "Discuss engineering trade-offs and roadmap prioritization."
+  },
+  {
+    "id": 30,
+    "category": "Category 4: Recording Capabilities",
+    "faq_ref": "FAQ Q46",
+    "topic": "Silent recordings that are 100% searchable by AI",
+    "angle": "You don't need a podcast microphone or quiet room to create an interactive demo.",
+    "hook_seed": "You don't need to speak a single word to make an interactive demo. Demoly indexes the DOM, so completely silent recordings are 100% searchable by AI.",
+    "thread_focus": "Highlight the freedom of recording in noisy offices or without voiceover."
+  },
+  {
+    "id": 31,
+    "category": "Category 4: Recording Capabilities",
+    "faq_ref": "FAQ Q48",
+    "topic": "Handling iframes, embedded videos, and PDFs inside web applications",
+    "angle": "Cross-origin sandbox boundaries and how Demoly handles complex embedded pages.",
+    "hook_seed": "The hardest engineering challenge in browser recording: cross-origin iframes. How Demoly captures embedded media and web sandboxes:",
+    "thread_focus": "Technical walkthrough of DOM capture across dynamic web elements and iframes."
+  },
+  {
+    "id": 32,
+    "category": "Category 5: Editing & Masking",
+    "faq_ref": "FAQ Q51",
+    "topic": "The 4 core editing capabilities: Trimming, element masking, comments, cursor highlights",
+    "angle": "Polishing raw recordings directly in the browser editor before sharing.",
+    "hook_seed": "How to polish an agency handover in 60 seconds: 1. Trim pauses 2. Mask passwords 3. Pin key comments 4. Enable cursor highlights.",
+    "thread_focus": "Walk through the rapid post-recording polishing workflow."
+  },
+  {
+    "id": 33,
+    "category": "Category 5: Editing & Masking",
+    "faq_ref": "FAQ Q53",
+    "topic": "Multi-cut middle trimming without re-rendering or downloading",
+    "angle": "Deleting awkward mistakes, staging load times, and silences seamlessly.",
+    "hook_seed": "Made a mistake in the middle of a 7-minute demo? In Demoly, make multiple cuts in the browser timeline and let it stitch seamlessly without re-rendering.",
+    "thread_focus": "Show the speed of browser-based non-destructive trimming."
+  },
+  {
+    "id": 34,
+    "category": "Category 5: Editing & Masking",
+    "faq_ref": "FAQ Q54",
+    "topic": "Non-destructive storage: Why raw original recordings are permanently preserved",
+    "angle": "Edits are a metadata overlay layer; admins can revert any change at any time.",
+    "hook_seed": "Most video editors permanently destroy cut footage. Demoly stores edits as a non-destructive metadata overlay. Admins can revert any edit at any time.",
+    "thread_focus": "Explain the safety of metadata overlays over raw recording assets."
+  },
+  {
+    "id": 35,
+    "category": "Category 5: Editing & Masking",
+    "faq_ref": "FAQ Q55 & Q56",
+    "topic": "Editing a published video: Instant URL sync and automated AI re-indexing",
+    "angle": "Never redistribute new links; AI automatically re-aligns timestamps to edited timeline.",
+    "hook_seed": "What happens when you edit a video you already sent to a client? In Demoly, the shared link updates instantly and AI re-indexes timestamps automatically.",
+    "thread_focus": "Showcase the zero-maintenance update loop for published videos."
+  },
+  {
+    "id": 36,
+    "category": "Category 5: Editing & Masking",
+    "faq_ref": "FAQ Q57 & Q58",
+    "topic": "Element-Level Masking: Why static pixel blur boxes fail on web apps",
+    "angle": "Masks stick to the DOM element across scrolling, resizing, and new page URLs.",
+    "hook_seed": "Traditional video masking uses static blur boxes that break when a page scrolls. Demoly masks the DOM element itself. Here is why that matters for client privacy:",
+    "thread_focus": "Deep dive into dynamic DOM element tracking vs static coordinate blur boxes."
+  },
+  {
+    "id": 37,
+    "category": "Category 5: Editing & Masking",
+    "faq_ref": "FAQ Q59 & Q108",
+    "topic": "Reversible for creators, completely stripped for external viewers",
+    "angle": "Admins can unmask; public presentation layer sanitizes DOM so viewers can never inspect.",
+    "hook_seed": "When you mask a password in Demoly, is it actually secure? External viewers cannot inspect the DOM to recover it—the presentation layer is completely sanitized.",
+    "thread_focus": "Explain the security and compliance architecture of Demoly's redaction layer."
+  },
+  {
+    "id": 38,
+    "category": "Category 5: Editing & Masking",
+    "faq_ref": "FAQ Q61",
+    "topic": "Trimming vs Masking: Understanding temporal cuts vs spatial privacy",
+    "angle": "Removing dead time vs protecting sensitive data across the video timeline.",
+    "hook_seed": "Trimming removes temporal dead air. Masking protects spatial privacy. How Demoly's editor combines both in under 60 seconds:",
+    "thread_focus": "Clear conceptual distinction between timeline trimming and element redaction."
+  },
+  {
+    "id": 39,
+    "category": "Category 6: Sharing & Access",
+    "faq_ref": "FAQ Q62",
+    "topic": "The 3 sharing modes: Public link, Private workspace, Restricted email",
+    "angle": "Balancing frictionless client sharing with strict enterprise compliance.",
+    "hook_seed": "How tech agencies share video handovers: 1. Public links with embedded AI 2. Private workspace folders 3. Restricted client email domains.",
+    "thread_focus": "Explain how agencies configure access control according to client security requirements."
+  },
+  {
+    "id": 40,
+    "category": "Category 6: Sharing & Access",
+    "faq_ref": "FAQ Q63",
+    "topic": "Zero-friction link viewing: Clients query the AI without creating an account",
+    "angle": "If a client has to sign up to view a video, they will simply schedule a call instead.",
+    "hook_seed": "If your client has to create an account and remember a password just to search your demo video, they will simply schedule a call instead. Zero friction matters.",
+    "thread_focus": "Highlight the vital importance of frictionless public links with embedded AI chat."
+  },
+  {
+    "id": 41,
+    "category": "Category 6: Sharing & Access",
+    "faq_ref": "FAQ Q65 & Q66",
+    "topic": "Instant access revocation and workspace roles (Admin, Editor, Viewer)",
+    "angle": "Revoking access when client personnel change; role separation.",
+    "hook_seed": "What happens when a client stakeholder leaves the company? In Demoly, admins revoke email access in one click with immediate link termination.",
+    "thread_focus": "Explain enterprise access governance for agency client deliverables."
+  },
+  {
+    "id": 42,
+    "category": "Category 6: Sharing & Access",
+    "faq_ref": "FAQ Q67 & Q68",
+    "topic": "Why video downloads are omitted in V1 (and how creators will control downloads)",
+    "angle": "Web-first interactive playback vs raw MP4 file hoarding; future toggle.",
+    "hook_seed": "Why doesn't Demoly have an MP4 download button in V1? Because MP4 files can't be searched interactively. Here is the roadmap on downloads:",
+    "thread_focus": "Explain why interactive web links are superior to static video downloads."
+  },
+  {
+    "id": 43,
+    "category": "Category 7: AI Architecture & Search",
+    "faq_ref": "FAQ Q70",
+    "topic": "Dual AI backend: DeepSeek reasoning + Google Gemini multimodal vision",
+    "angle": "Pairing deep language reasoning with visual frame comprehension.",
+    "hook_seed": "Why one AI model isn't enough: Demoly pairs deep language reasoning for code hierarchies with multimodal vision for visual layout confirmation.",
+    "thread_focus": "Explain how hybrid AI architecture balances text/DOM reasoning with visual frame recognition."
+  },
+  {
+    "id": 44,
+    "category": "Category 7: AI Architecture & Search",
+    "faq_ref": "FAQ Q71",
+    "topic": "The 7 data streams processed by Demoly's AI engine",
+    "angle": "Transcripts, DOM nodes, OCR, clicks, layout states, metadata, and visual snapshots.",
+    "hook_seed": "Most video AI only looks at speech transcripts. Demoly indexes 7 continuous data streams to answer questions with 85% precision.",
+    "thread_focus": "Explain the 7 indexing streams that power Demoly's visual search engine."
+  },
+  {
+    "id": 45,
+    "category": "Category 7: AI Architecture & Search",
+    "faq_ref": "FAQ Q72",
+    "topic": "Visual indexing without bandwidth bloat: DOM capture + on-demand snapshots",
+    "angle": "Continuous DOM event tracking with targeted frame snapshots only when queried.",
+    "hook_seed": "How does Demoly keep AI queries lightning-fast without burning server GPUs on 30fps video? It indexes DOM changes and captures screenshots only on demand.",
+    "thread_focus": "Explain the engineering behind lightweight hybrid visual indexing."
+  },
+  {
+    "id": 46,
+    "category": "Category 7: AI Architecture & Search",
+    "faq_ref": "FAQ Q73",
+    "topic": "The query only DOM indexing can answer: Unspoken required form fields",
+    "angle": "Creator fills out form without saying 'email'; Demoly detects the required tag.",
+    "hook_seed": "A creator fills out a registration form while talking about general settings, never saying the word 'email'. Loom fails completely. Here is how Demoly answers:",
+    "thread_focus": "Present a concrete, relatable scenario where audio transcription fails and DOM indexing wins."
+  },
+  {
+    "id": 47,
+    "category": "Category 7: AI Architecture & Search",
+    "faq_ref": "FAQ Q74",
+    "topic": "When speech transcripts are essential: Off-screen scrollable lists",
+    "angle": "Creator mentions client names scrolled out of view; speech transcript captures it.",
+    "hook_seed": "Why speech transcripts still matter: when a creator demonstrates a 100-row table and mentions a client scrolled off-screen, audio captures what the screen hid.",
+    "thread_focus": "Demonstrate the balanced synthesis of audio transcripts alongside DOM inspection."
+  },
+  {
+    "id": 48,
+    "category": "Category 7: AI Architecture & Search",
+    "faq_ref": "FAQ Q76 & Q77",
+    "topic": "Sequential workflow recognition: Open settings -> Click team -> Assign admin",
+    "angle": "Tracking chronological action paths across dynamic web states.",
+    "hook_seed": "Can AI understand a 4-step sequential workflow in a web app? Demoly tracks state transitions chronologically so clients get step-by-step instructions.",
+    "thread_focus": "Explain how Demoly synthesizes full action sequences from recorded interactions."
+  },
+  {
+    "id": 49,
+    "category": "Category 7: AI Architecture & Search",
+    "faq_ref": "FAQ Q78 & Q79",
+    "topic": "State at second 42: How Demoly achieves 80-85% timestamp accuracy",
+    "angle": "Precise timestamp alignment across candidate matches and visual states.",
+    "hook_seed": "How does Demoly achieve 80-85% timestamp accuracy when clients query a video? It combines DOM state changes with visual frame snapshots on demand.",
+    "thread_focus": "Explain timestamp scoring, confidence thresholds, and candidate matches."
+  },
+  {
+    "id": 50,
+    "category": "Category 7: AI Architecture & Search",
+    "faq_ref": "FAQ Q80 & Q81",
+    "topic": "Mitigating AI hallucinations: Confidence scoring and candidate links",
+    "angle": "Never assert false facts; provide verified timestamp links when ambiguous.",
+    "hook_seed": "How Demoly eliminates AI hallucinations in video search: when confidence is low, it presents verified candidate timestamps instead of making up answers.",
+    "thread_focus": "Discuss AI reliability, hallucination mitigation, and enterprise trust."
+  },
+  {
+    "id": 51,
+    "category": "Category 7: AI Architecture & Search",
+    "faq_ref": "FAQ Q82 & Q83",
+    "topic": "Conversational context: Asking follow-up questions to your video recording",
+    "angle": "'What was clicked first?' followed by 'What happened after that?'",
+    "hook_seed": "You can have a full conversational dialogue with your demo video. Demoly retains chat context, allowing clients to ask progressive follow-up questions.",
+    "thread_focus": "Highlight the conversational depth of Demoly's chat assistant."
+  },
+  {
+    "id": 52,
+    "category": "Category 7: AI Architecture & Search",
+    "faq_ref": "FAQ Q84 & Q85",
+    "topic": "Current AI limitations: English-first in V1 and roadmap for multilingual search",
+    "angle": "Honest boundaries: English transcription in V1; Spanish/German on roadmap.",
+    "hook_seed": "Demoly's AI is optimized strictly for English in V1. Multilingual querying across global client teams is actively on our roadmap. Here is the vision:",
+    "thread_focus": "Honest discussion of current language boundaries and international expansion plans."
+  },
+  {
+    "id": 53,
+    "category": "Category 8: Roadmap & Documentation",
+    "faq_ref": "FAQ Q86 & Q87",
+    "topic": "Comparing two recordings: AI analysis of workflow differences",
+    "angle": "Comparing staging vs production walkthroughs or V1 vs V2 features.",
+    "hook_seed": "Imagine prompting an AI to compare two different recording links and tell you what changed in the checkout flow between staging and production.",
+    "thread_focus": "Preview multi-video comparison capabilities for QA and product teams."
+  },
+  {
+    "id": 54,
+    "category": "Category 8: Roadmap & Documentation",
+    "faq_ref": "FAQ Q88 & Q89",
+    "topic": "Auto-generating SOPs and handover guides (PDF/DOCX) from video recordings",
+    "angle": "Record once, get both interactive video and formatted SOP with screenshots.",
+    "hook_seed": "Nobody wants to write step-by-step documentation manually. On our roadmap: record a walkthrough once, and let AI generate a formatted PDF SOP with screenshots.",
+    "thread_focus": "Present the upcoming automated documentation generation engine."
+  },
+  {
+    "id": 55,
+    "category": "Category 8: Roadmap & Documentation",
+    "faq_ref": "FAQ Q90 & Q91",
+    "topic": "Editable AI documentation: Full formatting control and screenshot swaps",
+    "angle": "Export to PDF/DOCX or edit directly inside Demoly's web editor.",
+    "hook_seed": "AI-generated documentation shouldn't be a locked file. Demoly will let you rearrange steps, swap screenshots, and export clean PDF/DOCX files.",
+    "thread_focus": "Detail user customization and editing workflows for generated documents."
+  },
+  {
+    "id": 56,
+    "category": "Category 8: Roadmap & Documentation",
+    "faq_ref": "FAQ Q93 & Q94",
+    "topic": "Answering 'How do I perform X?' vs 'Where is X located?'",
+    "angle": "Synthesizing full multi-step action recipes with timestamp jump links.",
+    "hook_seed": "Demoly doesn't just answer 'where is the setting?' It synthesizes the full recipe: 1. Go to Settings 2. Click Team 3. Toggle Admin—with timestamp links.",
+    "thread_focus": "Demonstrate action recipe synthesis from recorded browser sessions."
+  },
+  {
+    "id": 57,
+    "category": "Category 8: Roadmap & Documentation",
+    "faq_ref": "FAQ Q95",
+    "topic": "Itemized feature extraction across an entire client project folder",
+    "angle": "Prompting AI to list every feature demonstrated across 20 project recordings.",
+    "hook_seed": "Delivered 20 videos for a client? Prompt Demoly to extract a complete itemized feature catalog of everything demonstrated across the entire project.",
+    "thread_focus": "Show the enterprise utility of cataloging features from video repositories."
+  },
+  {
+    "id": 58,
+    "category": "Category 8: Roadmap & Documentation",
+    "faq_ref": "FAQ Q96",
+    "topic": "Automated anomaly detection: Flagging console errors and 500 API calls automatically",
+    "angle": "Roadmap: Demoly automatically detects failed network requests during recordings.",
+    "hook_seed": "On our roadmap: Demoly will automatically flag 500 API errors and unhandled console exceptions that occur while you record. Zero manual log copying.",
+    "thread_focus": "Preview intelligent anomaly detection for QA and developer teams."
+  },
+  {
+    "id": 59,
+    "category": "Category 9: Bug Reporting & MCP",
+    "faq_ref": "FAQ Q97",
+    "topic": "Visual proof + technical context vs fragmented Slack bug reports",
+    "angle": "Why screenshots fail developers: missing headers, payloads, and DOM trees.",
+    "hook_seed": "Sending a developer a cropped Slack screenshot of a broken form is why bug tickets take 3 days instead of 20 minutes.",
+    "thread_focus": "Contrast fragmented Slack bug reports with a single Demoly diagnostic link."
+  },
+  {
+    "id": 60,
+    "category": "Category 9: Bug Reporting & MCP",
+    "faq_ref": "FAQ Q98",
+    "topic": "The developer diagnostic bundle: Video + DOM hierarchy + console logs + network trace",
+    "angle": "Everything an engineer needs to reproduce and resolve defects in minutes.",
+    "hook_seed": "What developers actually need to fix a bug: 1. Visual video proof 2. DOM hierarchy 3. Console errors 4. Network request payload. Demoly packages all 4.",
+    "thread_focus": "Break down the developer diagnostic bundle that Demoly attaches to recording links."
+  },
+  {
+    "id": 61,
+    "category": "Category 9: Bug Reporting & MCP",
+    "faq_ref": "FAQ Q99",
+    "topic": "The Model Context Protocol (MCP) server for Cursor, Claude Code, and Antigravity",
+    "angle": "AI coding agents fixing frontend bugs autonomously using Demoly context.",
+    "hook_seed": "Here is what happens when QA records a bug in Demoly and sends the link to an AI coding agent: the agent reads the DOM error and prepares the fix automatically.",
+    "thread_focus": "Deep dive into the MCP server architecture for autonomous AI bug resolution."
+  },
+  {
+    "id": 62,
+    "category": "Category 9: Bug Reporting & MCP",
+    "faq_ref": "FAQ Q100",
+    "topic": "Two-way developer collaboration: Pinned timestamp comments and issue resolution",
+    "angle": "Dev reviews DOM state, leaves clarifying timestamp reply, marks bug resolved.",
+    "hook_seed": "Developer fixes bug -> records 10-second Demoly verification -> replies on the original QA link. Task resolved without a single Slack ping.",
+    "thread_focus": "Show the closed-loop collaborative bug resolution process inside Demoly."
+  },
+  {
+    "id": 63,
+    "category": "Category 10: Pricing & Administration",
+    "faq_ref": "FAQ Q101",
+    "topic": "The Free Plan: Unlimited videos, unlimited duration, single seat",
+    "angle": "Demoly's generous entry tier vs Loom's restrictive 5-minute cap.",
+    "hook_seed": "Why does Demoly offer unlimited video recordings and unlimited duration on its Free plan? Because artificial time limits destroy engineering documentation.",
+    "thread_focus": "Highlight the value of the Free plan for individual developers and PMs."
+  },
+  {
+    "id": 64,
+    "category": "Category 10: Pricing & Administration",
+    "faq_ref": "FAQ Q101 & Q102",
+    "topic": "The Pro Plan: Multi-seat team collaboration and unlimited AI queries",
+    "angle": "Adding PMs, QA, and devs to unified client workspaces on monthly/annual billing.",
+    "hook_seed": "How growing dev studios collaborate on Demoly: Pro plans with multi-seat access, unified client project folders, and unlimited AI search queries.",
+    "thread_focus": "Explain the Pro plan benefits for agency team collaboration."
+  },
+  {
+    "id": 65,
+    "category": "Category 10: Pricing & Administration",
+    "faq_ref": "FAQ Q103",
+    "topic": "Client project folder organization and permission segregation",
+    "angle": "Dedicated folder per client with restricted Viewer permissions.",
+    "hook_seed": "Agency best practice: create dedicated project folders for each client (e.g., Client_LawFirm_Alpha) with restricted Viewer permissions to protect confidentiality.",
+    "thread_focus": "Walk through clean workspace architecture for agencies with 20+ clients."
+  },
+  {
+    "id": 66,
+    "category": "Category 10: Pricing & Administration",
+    "faq_ref": "FAQ Q104",
+    "topic": "Permanent recording deletion and asset lifecycle management",
+    "angle": "Admins retain complete control to delete recordings and purge DOM data.",
+    "hook_seed": "When an agency project concludes, admins retain full control to permanently delete recordings and wipe DOM metadata for client compliance.",
+    "thread_focus": "Discuss asset management, storage hygiene, and client data deletion."
+  },
+  {
+    "id": 67,
+    "category": "Category 11: Security & Vision",
+    "faq_ref": "FAQ Q105",
+    "topic": "Data security: Encrypted DOM storage at rest and in transit",
+    "angle": "Enterprise security architecture protecting proprietary client workflows.",
+    "hook_seed": "When agencies deliver healthcare, legal, or fintech apps, data isolation is non-negotiable. Demoly encrypts DOM data at rest and strictly isolates workspaces.",
+    "thread_focus": "Detail encryption standards, cloud security, and tenant isolation."
+  },
+  {
+    "id": 68,
+    "category": "Category 11: Security & Vision",
+    "faq_ref": "FAQ Q106",
+    "topic": "Chrome extension permissions scoped strictly to active tabs",
+    "angle": "Respecting developer and client privacy during screen recording.",
+    "hook_seed": "How Demoly scopes extension permissions: strictly bound to the active browser tab and microphone. Zero access to desktop windows or outside apps.",
+    "thread_focus": "Address permission hygiene and browser security guarantees."
+  },
+  {
+    "id": 69,
+    "category": "Category 11: Security & Vision",
+    "faq_ref": "FAQ Q107",
+    "topic": "System resilience and failure recovery edge cases",
+    "angle": "Graceful error handling, engineer alerts, and manual recovery assistance.",
+    "hook_seed": "What happens if a recording or server processing fails? Demoly provides explicit status notifications and engineering recovery safeguards.",
+    "thread_focus": "Explain fault-tolerant design and customer support safety nets."
+  },
+  {
+    "id": 70,
+    "category": "Category 11: Security & Vision",
+    "faq_ref": "FAQ Q108",
+    "topic": "The unbreachable redaction layer: Sanitized viewer DOM vs private database",
+    "angle": "Why external viewers can never inspect or recover redacted passwords/PII.",
+    "hook_seed": "Redacting sensitive client data in video: why Demoly's public presentation layer strips redacted data completely so no viewer can unmask it.",
+    "thread_focus": "Technical security deep-dive into client-side DOM sanitization."
+  },
+  {
+    "id": 71,
+    "category": "Category 11: Security & Vision",
+    "faq_ref": "FAQ Q109",
+    "topic": "The long-term vision: Demoly as the comprehensive Operating System for Agency Handovers",
+    "angle": "Synchronized video + SOP docs + client ticketing + autonomous bug remediation.",
+    "hook_seed": "Demoly's long-term vision: becoming the comprehensive operating system for agency client handoffs, documentation, and autonomous bug fixing.",
+    "thread_focus": "Share the founder's ambitious roadmap for modern software agencies."
+  },
+  {
+    "id": 72,
+    "category": "Trending & Real-Time Tech",
+    "faq_ref": "FAQ Q16 & Q99",
+    "topic": "The 'Vibe Coding' reality check: When code generation is 10x faster, handovers stall",
+    "angle": "Cursor and Claude write code in minutes; explaining it to clients takes hours.",
+    "hook_seed": "Everyone is talking about 'vibe coding' a SaaS in 2 hours. But nobody mentions: you can't vibe-explain a custom web app to a non-technical client.",
+    "thread_focus": "Explore how AI code generation shifts the bottleneck to client handovers and testing."
+  },
+  {
+    "id": 73,
+    "category": "Trending & Real-Time Tech",
+    "faq_ref": "FAQ Q16 & Q99",
+    "topic": "Why Claude Code needs browser eyes via Model Context Protocol (MCP)",
+    "angle": "Terminal coding agents are brilliant on backend, blind on frontend DOM states.",
+    "hook_seed": "AI coding agents like Cursor and Claude Code are masters of the terminal but blind to the browser DOM. Demoly's MCP server gives them eyes on the frontend.",
+    "thread_focus": "Explain how MCP enables terminal coding agents to see browser visual defects."
+  },
+  {
+    "id": 74,
+    "category": "Trending & Real-Time Tech",
+    "faq_ref": "FAQ Q1 & Q8",
+    "topic": "The death of the 'quick 5-minute call': The async developer movement",
+    "angle": "Calling out the 45-minute focus cost of a 5-minute sync.",
+    "hook_seed": "The biggest productivity lie in tech is 'let's hop on a quick 5-minute call.' That call costs 45 minutes of context switching.",
+    "thread_focus": "Rally the async remote work movement against pointless check-in meetings."
+  },
+  {
+    "id": 75,
+    "category": "Trending & Real-Time Tech",
+    "faq_ref": "FAQ Q3 & Q101",
+    "topic": "SaaS subscription fatigue: Why agencies are cutting bloated $20/seat tools",
+    "angle": "Trimming tool bloat for focused, high-utility developer platforms.",
+    "hook_seed": "Why are agencies still paying $20/seat monthly for screen recorders that only search microphone transcripts? The SaaS subscription backlash:",
+    "thread_focus": "Connect Demoly's unlimited pricing model to the widespread SaaS cost-cutting trend."
+  },
+  {
+    "id": 76,
+    "category": "Interactive & Community",
+    "faq_ref": "FAQ Q1 & Q28",
+    "topic": "Pick Your Nightmare: The 4 worst agency operational bottlenecks",
+    "angle": "Interactive poll/dilemma driving high reply counts and fierce debate.",
+    "hook_seed": "Pick the worst agency scenario: A) 30-min client call on Monday B) Vague bug report C) 100MB Google Drive video D) Paying $20/seat for Loom. Let's discuss:",
+    "thread_focus": "Drive comments by asking agency leaders to vote on their biggest operational headache."
+  },
+  {
+    "id": 77,
+    "category": "Interactive & Community",
+    "faq_ref": "FAQ Q28 & Q97",
+    "topic": "Unpopular opinion: If reproducing a bug takes over 60 seconds, QA is broken",
+    "angle": "Provocative hot take sparking discussion among QA engineers and developers.",
+    "hook_seed": "Unpopular opinion: If an engineer needs more than 60 seconds to reproduce a staging bug, the QA workflow is fundamentally broken. Here is why:",
+    "thread_focus": "Challenge traditional screenshot-and-Jira bug workflows with actionable alternatives."
+  },
+  {
+    "id": 78,
+    "category": "Interactive & Community",
+    "faq_ref": "FAQ Q1 & Q8",
+    "topic": "Honest question: How many billable hours did your agency lose to meetings this week?",
+    "angle": "Open question inviting agency owners to share real metrics and frustrations.",
+    "hook_seed": "Be honest: how many billable hours did your agency lose this week to client meetings that could have been an interactive 2-minute recording?",
+    "thread_focus": "Spark vulnerability and founder camaraderie around lost billable hours."
+  },
+  {
+    "id": 79,
+    "category": "Category 1 & 2: Differentiators",
+    "faq_ref": "FAQ Q3 & Q20",
+    "topic": "Loom vs Drive vs Supademo vs Demoly: The definitive agency comparison matrix",
+    "angle": "Positioning Demoly as the purpose-built tool for live web app delivery.",
+    "hook_seed": "Loom for quick memos. Drive for raw storage. Supademo for marketing tours. Demoly for live web app handovers and QA. Here is where each fits:",
+    "thread_focus": "Authoritative matrix comparing all 4 tools across search, setup, diagnostics, and pricing."
+  },
+  {
+    "id": 80,
+    "category": "Category 1 & 2: Differentiators",
+    "faq_ref": "FAQ Q13 & Q21",
+    "topic": "Killing the 'can we jump on a call?' message once and for all",
+    "angle": "Empowering clients to find answers self-serve without scheduling meetings.",
+    "hook_seed": "Today, we're killing the 'can we quickly jump on a call?' message from clients. Here is how async interactive handovers work:",
+    "thread_focus": "Show the before/after reality of agency communication when videos answer questions."
+  },
+  {
+    "id": 81,
+    "category": "Category 3 & 4: Mechanics",
+    "faq_ref": "FAQ Q28 & Q36",
+    "topic": "How cursor highlight animations and click rings improve bug diagnosis",
+    "angle": "Visual cues guiding developer attention directly to misbehaving elements.",
+    "hook_seed": "Visual clarity matters: how Demoly's automated cursor tracking and click rings help developers spot UI misalignments instantly.",
+    "thread_focus": "Explain the subtle UX features that make Demoly bug reports effortless to parse."
+  },
+  {
+    "id": 82,
+    "category": "Category 3 & 4: Mechanics",
+    "faq_ref": "FAQ Q39 & Q40",
+    "topic": "What happens when the staging app crashes during a Demoly recording session?",
+    "angle": "Capturing browser crash states, White Screens of Death, and unhandled exceptions.",
+    "hook_seed": "Staging crashed mid-recording? Demoly continues capturing the exact rendered failure state so developers see the crash as it happened.",
+    "thread_focus": "Highlight resilience when testing unstable staging environments."
+  },
+  {
+    "id": 83,
+    "category": "Category 5 & 6: Privacy & Control",
+    "faq_ref": "FAQ Q58 & Q60",
+    "topic": "Masking API keys and client secrets across dynamic Single Page Apps (SPAs)",
+    "angle": "Persistent redactions across route transitions in React, Next.js, and Vue.",
+    "hook_seed": "Demonstrating live web apps with sensitive API keys: how Demoly maintains element masks across client-side React and Next.js route transitions.",
+    "thread_focus": "Technical explanation of DOM mutation observers maintaining privacy masks."
+  },
+  {
+    "id": 84,
+    "category": "Category 5 & 6: Privacy & Control",
+    "faq_ref": "FAQ Q64 & Q69",
+    "topic": "Why public Demoly links are built for client handoffs, not public SEO hosting",
+    "angle": "Tailored for private client delivery with robust access control options.",
+    "hook_seed": "Demoly is built for high-stakes client software handoffs, not generic public video hosting. Here is how our privacy hierarchy works:",
+    "thread_focus": "Clarify product positioning as an operational handover tool rather than a video hosting site."
+  },
+  {
+    "id": 85,
+    "category": "Category 7 & 8: Intelligence",
+    "faq_ref": "FAQ Q77 & Q93",
+    "topic": "From video demonstration to full action recipe: Demoly's AI synthesis",
+    "angle": "Transforming visual clicks into numbered step-by-step instructions automatically.",
+    "hook_seed": "How Demoly transforms a 2-minute visual walkthrough into a structured, numbered action recipe with direct timestamp links:",
+    "thread_focus": "Show the AI synthesis engine converting visual demonstrations into step-by-step guides."
+  },
+  {
+    "id": 86,
+    "category": "Category 7 & 8: Intelligence",
+    "faq_ref": "FAQ Q81 & Q82",
+    "topic": "How to formulate questions to get the most accurate answers from Demoly",
+    "angle": "Goal-oriented queries referencing specific features for 85%+ timestamp accuracy.",
+    "hook_seed": "How to ask questions in Demoly for 85%+ timestamp accuracy: goal-oriented phrasing vs vague search. Share this with your clients:",
+    "thread_focus": "Provide practical search tips for agency clients and internal team members."
+  },
+  {
+    "id": 87,
+    "category": "Category 9 & 10: Operations",
+    "faq_ref": "FAQ Q97 & Q103",
+    "topic": "Organizing agency client workspaces: Clean project folders vs chaotic Slack channels",
+    "angle": "Centralizing all walkthroughs and bug reports in dedicated client folders.",
+    "hook_seed": "Stop scattering handover links across client Slack channels. How high-velocity agencies organize dedicated project repositories in Demoly:",
+    "thread_focus": "Teach clean agency repository organization to elevate client trust."
+  },
+  {
+    "id": 88,
+    "category": "Category 9 & 10: Operations",
+    "faq_ref": "FAQ Q25 & Q101",
+    "topic": "Why PMs and QA engineers love Demoly more than anyone else in the agency",
+    "angle": "PMs save hours on handovers; QA cuts ticket creation time by 80%.",
+    "hook_seed": "Developers write the code, but PMs and QA engineers bear the brunt of handovers and bug reports. Here is why Demoly is their secret weapon:",
+    "thread_focus": "Celebrate the operational heroes of software delivery: PMs and QA engineers."
+  },
+  {
+    "id": 89,
+    "category": "Category 1 & 11: Origin & Vision",
+    "faq_ref": "FAQ Q1 & Q109",
+    "topic": "The agency handover checklist: What every web studio should deliver at launch",
+    "angle": "Packaging staging sign-offs, video SOPs, and interactive search portals.",
+    "hook_seed": "The modern agency handover checklist in 2026: 1. Clean repo 2. Staging credentials 3. Dedicated Demoly folder with AI search 4. Zero follow-up meeting requests.",
+    "thread_focus": "Provide an actionable launch checklist that agencies can adopt immediately."
+  },
+  {
+    "id": 90,
+    "category": "Category 1 & 11: Origin & Vision",
+    "faq_ref": "FAQ Q8 & Q109",
+    "topic": "The post-launch retainer trap: Why answering questions for free kills profit margins",
+    "angle": "Unplanned client training eating into agency development retainers.",
+    "hook_seed": "Unplanned post-launch support is the silent killer of agency profit margins. If you aren't automating handovers, you're working for free.",
+    "thread_focus": "Analyze agency unit economics and how interactive documentation protects billable margins."
+  },
+  {
+    "id": 91,
+    "category": "Category 2 & 4: Deep Dive",
+    "faq_ref": "FAQ Q6 & Q36",
+    "topic": "What is the Document Object Model, and why does your screen recorder need it?",
+    "angle": "Plain-English explanation of DOM trees and why they unlock conversational search.",
+    "hook_seed": "Why should you care if your screen recorder knows the Document Object Model (DOM)? Because it turns a dumb video into a searchable database.",
+    "thread_focus": "Demystify DOM capture for agency founders and non-technical managers."
+  },
+  {
+    "id": 92,
+    "category": "Category 2 & 4: Deep Dive",
+    "faq_ref": "FAQ Q41 & Q42",
+    "topic": "Buffering locally vs streaming: Demoly's runtime upload mechanics",
+    "angle": "Progressive streaming ensures zero upload wait times when recording ends.",
+    "hook_seed": "Ever wait 5 minutes for a 10-minute video to upload after clicking stop? Demoly buffers and streams progressively so your link is ready instantly.",
+    "thread_focus": "Highlight the speed and instant gratification of progressive streaming."
+  },
+  {
+    "id": 93,
+    "category": "Category 5 & 7: Architecture",
+    "faq_ref": "FAQ Q56 & Q71",
+    "topic": "Re-indexing after edits: How Demoly keeps timestamps aligned with trimmed videos",
+    "angle": "Automated pipeline re-aligning DOM events to cut timecodes.",
+    "hook_seed": "What happens under the hood when you trim a Demoly video? Our pipeline automatically re-aligns DOM state timestamps to the edited timeline in seconds.",
+    "thread_focus": "Explain the technical precision of Demoly's automated re-indexing pipeline."
+  },
+  {
+    "id": 94,
+    "category": "Category 5 & 7: Architecture",
+    "faq_ref": "FAQ Q78 & Q80",
+    "topic": "The 'state at second 14': Describing web app UI state at any precise moment",
+    "angle": "DOM state snapshots give AI deterministic certainty about UI layouts.",
+    "hook_seed": "Can AI tell you what state a form was in at second 14 of a video? Because DOM states are tied to timestamps, Demoly describes the UI with deterministic precision.",
+    "thread_focus": "Demonstrate deterministic state retrieval vs loose visual approximations."
+  },
+  {
+    "id": 95,
+    "category": "Category 8 & 9: Future Engineering",
+    "faq_ref": "FAQ Q88 & Q98",
+    "topic": "From visual bug to auto-generated SOP: The future of technical documentation",
+    "angle": "Unifying bug reports, training walkthroughs, and formatted manuals.",
+    "hook_seed": "The future of agency documentation: one browser recording that simultaneously acts as an interactive video, a QA bug trace, and a downloadable PDF SOP.",
+    "thread_focus": "Paint an inspiring vision of the unified documentation future for agencies."
+  },
+  {
+    "id": 96,
+    "category": "Category 8 & 9: Future Engineering",
+    "faq_ref": "FAQ Q99 & Q100",
+    "topic": "Why developer-designer handoffs need visual timestamps, not Figma comments",
+    "angle": "Static Figma comments can't show runtime glitches, animations, or responsive errors.",
+    "hook_seed": "Figma is great for the ideal design state. For showing how the production modal glitches when typed into too fast, you need a timestamped recording.",
+    "thread_focus": "Show why dynamic production bugs require video timestamps rather than static Figma pins."
+  },
+  {
+    "id": 97,
+    "category": "Category 10 & 11: Governance",
+    "faq_ref": "FAQ Q101 & Q105",
+    "topic": "Why bootstrapped dev studios choose Demoly over venture-backed recorders",
+    "angle": "Built by agency founders for agency cashflow; zero artificial paywalls.",
+    "hook_seed": "We didn't build Demoly to chase VC hype. We built it because our agency was losing 2 to 4 hours per person every week on repeat Google Meet calls. Real utility first.",
+    "thread_focus": "Share the grounded, bootstrapped founder philosophy behind Demoly."
+  },
+  {
+    "id": 98,
+    "category": "Category 10 & 11: Governance",
+    "faq_ref": "FAQ Q103 & Q108",
+    "topic": "Client confidentiality: How agencies deliver fintech and healthcare apps safely",
+    "angle": "Encrypted DOM storage, role permissions, and unbreachable element redactions.",
+    "hook_seed": "Delivering healthcare or fintech web apps? How Demoly's element masking and encrypted DOM storage protect client confidentiality at enterprise standards.",
+    "thread_focus": "Reassure enterprise and compliance-focused agencies regarding data security."
+  },
+  {
+    "id": 99,
+    "category": "Summary & Synthesis",
+    "faq_ref": "FAQ Q1-Q109",
+    "topic": "The 10 golden rules of flawless web application handovers",
+    "angle": "Comprehensive thread synthesizing the ultimate agency handover playbook.",
+    "hook_seed": "After delivering 85+ client web applications, we distilled the 10 golden rules of flawless handovers that eliminate client support calls forever:",
+    "thread_focus": "Deliver the definitive, high-value 10-point handover masterclass thread."
+  },
+  {
+    "id": 100,
+    "category": "Summary & Synthesis",
+    "faq_ref": "FAQ Q1-Q109",
+    "topic": "The future of agency client relationships: From high-friction meetings to async trust",
+    "angle": "Elevating client trust by empowering them to find answers instantly on demand.",
+    "hook_seed": "Clients don't want more meetings. They want their software to work and their questions answered instantly. That is the promise of Demoly.",
+    "thread_focus": "Inspiring closing thread on building deep client trust through async empowerment."
+  }
+]
