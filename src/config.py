@@ -82,6 +82,16 @@ DEFAULT_ACCOUNT_PERSONAS = [
         "persona": "Agency Operations Strategist & Client Experience Lead. Focuses on client communication bottlenecks, unpaid scope creep in handover videos, and scaling client delivery without hiring more support.",
         "target_audience": "Digital agencies, dev shops, product managers, customer success leads",
     },
+    {
+        "name": "Product & UX Engineer",
+        "persona": "Product Designer & UI/UX Engineer. Focuses on the death of confusing software walkthroughs, visual bug reporting, interactive element-level pinning, and zero-friction client experiences.",
+        "target_audience": "UI/UX designers, design engineers, frontend developers, product creators",
+    },
+    {
+        "name": "Indie Builder / Vibe Coder",
+        "persona": "Build-in-Public Solopreneur & Vibe Coder. Focuses on rapid prototyping with AI, testing workflows in public, raw developer experiments, and unfiltered takes on modern software culture.",
+        "target_audience": "Vibe coders, solopreneurs, indie hackers, developer community",
+    },
 ]
 
 

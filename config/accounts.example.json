@@ -6,7 +6,7 @@
     "target_audience": "Founders, indie hackers, agency owners, early-stage CTOs"
   },
   {
-    "name": "Tech / Engineer",
+    "name": "Tech Lead",
     "channel_id": "YOUR_SECOND_BUFFER_CHANNEL_ID",
     "persona": "Senior Full-Stack Engineer & AI Systems Architect. Focuses on browser internals, DOM state indexing vs lossy video transcripts, deterministic AI agents, and developer tooling efficiency.",
     "target_audience": "Software engineers, frontend/fullstack developers, tech leads"
@@ -16,5 +16,17 @@
     "channel_id": "YOUR_THIRD_BUFFER_CHANNEL_ID",
     "persona": "Agency Operations Strategist & Client Experience Lead. Focuses on client communication bottlenecks, unpaid scope creep in handover videos, and scaling client delivery without hiring more support.",
     "target_audience": "Digital agencies, dev shops, product managers, customer success leads"
+  },
+  {
+    "name": "Product Design",
+    "channel_id": "YOUR_FOURTH_BUFFER_CHANNEL_ID",
+    "persona": "Product Designer & UI/UX Engineer. Focuses on the death of confusing software walkthroughs, visual bug reporting, interactive element-level pinning, and zero-friction client experiences.",
+    "target_audience": "UI/UX designers, design engineers, frontend developers, product creators"
+  },
+  {
+    "name": "Vibe Coder",
+    "channel_id": "YOUR_FIFTH_BUFFER_CHANNEL_ID",
+    "persona": "Build-in-Public Solopreneur & Vibe Coder. Focuses on rapid prototyping with AI, testing workflows in public, raw developer experiments, and unfiltered takes on modern software culture.",
+    "target_audience": "Vibe coders, solopreneurs, indie hackers, developer community"
   }
 ]
