@@ -1,1 +1,19 @@
 Timestamp,Post Type,Content,Buffer ID,Status
+2026-09-21 09:41:26 UTC,single,"Unplanned post-launch support is the silent killer of agency profit margins.
+
+When you spend 15 hours a week answering questions already explained in handover videos, you are working for free.
+
+Automate client answers instead of jumping on calls.
+
+#SaaS #webdev #vibecoding",6ab0fbc6e47f7384394df4be,sent (2026-09-22T04:30:00.000Z),none
+2026-09-21 09:41:29 UTC,thread,"Most AI tools are completely blind to what is actually happening on your screen.
+
+They rely entirely on microphone audio transcripts. If you didn't say it out loud while recording, the AI cannot find it. || This is a massive bottleneck for engineering teams and client handovers.
+
+When a client asks 'Where is the billing button?', audio-only search fails if you never spoke those exact words on camera. || Demoly solves this by capturing the browser DOM tree instead of raw pixel video.
+
+Every click, input field, layout state, and route change is indexed with precise timestamps. || When an AI agent or client queries your recording, it inspects the actual UI elements rendered on screen.
+
+No voiceover required. The DOM structure tells the exact story. || How does your team currently handle searching through technical walkthroughs and bug recordings?
+
+#ai #programming #automation",6ab0fbc9905ead849161d1e2,sent (2026-09-21T13:00:00.000Z),none
