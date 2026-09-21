@@ -1,10 +1,14 @@
 name: Demoly Daily X Content Automation
 
 on:
-  # Daily automated schedule (e.g., runs every day at 13:30 UTC / 7:00 PM IST / 9:30 AM EDT)
-  # You can adjust the cron schedule below:
+  # Daily automated schedule: runs at 03:45 UTC (9:15 AM IST) every morning.
+  # Automatically schedules today's 3 posts for peak global & Indian engagement:
+  #   - Slot 1 (10:00 AM IST / 04:30 UTC): Single Tweet (Indian & APAC morning start)
+  #   - Slot 2 ( 6:30 PM IST / 13:00 UTC): Thread (US morning 9:00 AM EST + Europe afternoon)
+  #   - Slot 3 (10:30 PM IST / 17:00 UTC): Media Post (US West Coast / Silicon Valley 10:00 AM PST)
   schedule:
-    - cron: '30 13 * * *'
+    - cron: '45 3 * * *'
+
 
   # Manual trigger button in GitHub Actions UI for testing or on-demand posts
   workflow_dispatch:

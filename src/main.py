@@ -202,6 +202,33 @@ def run_pipeline(
     log_published_post(content=content, buffer_id=buffer_id, status=status_entry)
 
 
+def get_optimal_engagement_slots(now_utc: Optional[datetime] = None) -> List[datetime]:
+    """
+    Returns 3 peak global engagement slots optimized for BOTH Indian (IST)
+    and International (US / Europe) audiences:
+
+      Slot 1 (Single Tweet): 10:00 AM IST (04:30 UTC)
+              -> India morning start + Asia-Pacific workday peak.
+      Slot 2 (Thread):       6:30 PM IST (13:00 UTC / 9:00 AM US-EST / 2:00 PM CET)
+              -> The Global Sweet Spot: India evening commute + US East Coast start + Europe afternoon.
+      Slot 3 (Media Post):   10:30 PM IST (17:00 UTC / 1:00 PM US-EST / 10:00 AM US-PST)
+              -> US West Coast (Silicon Valley) morning + US East Coast afternoon + late India.
+    """
+    if now_utc is None:
+        now_utc = datetime.now(timezone.utc)
+
+    target_slots_utc = [(4, 30), (13, 0), (17, 0)]
+    scheduled = []
+
+    for h, m in target_slots_utc:
+        candidate = now_utc.replace(hour=h, minute=m, second=0, microsecond=0)
+        if candidate <= now_utc + timedelta(minutes=5):
+            candidate += timedelta(days=1)
+        scheduled.append(candidate)
+
+    return scheduled
+
+
 def run_daily_batch(
     force_dry_run: bool = False,
     force_live: bool = False,
@@ -230,10 +257,14 @@ def run_daily_batch(
         if share_now:
             print(" Schedule: Publishing all 3 posts IMMEDIATELY (shareNow)")
         elif spaced:
-            print(" Schedule: Spacing 3 posts throughout the day (+0h, +4h, +8h)")
+            print(" Schedule: Spacing 3 posts at peak Global + Indian engagement windows:")
+            print("           * Slot 1: 10:00 AM IST (04:30 UTC) -> Single Tweet")
+            print("           * Slot 2:  6:30 PM IST (13:00 UTC / 9:00 AM EST) -> Thread")
+            print("           * Slot 3: 10:30 PM IST (17:00 UTC / 10:00 AM PST) -> Media Post")
         else:
             print(" Schedule: Adding all 3 posts to Buffer posting queue")
     print("=" * 65)
+
 
     # 1. Plan today's 3 posts with Trend-First Dynamic Source Selection
     plan: DailyCadencePlan = plan_daily_cadence()
@@ -302,19 +333,21 @@ def run_daily_batch(
     # Live Mode
     print("\nPublishing 3 posts to Buffer...")
     buffer_client = BufferClient()
-    spacing_hours = [0, 4, 8]  # Morning, Mid-day, Evening
+    optimal_slots = get_optimal_engagement_slots() if spaced else []
 
     for idx, (item, content) in enumerate(generated_posts):
         due_at = None
         if share_now:
             mode = "shareNow"
         elif spaced:
-            offset = spacing_hours[idx] if idx < len(spacing_hours) else (idx * 4)
-            target_time = datetime.now(timezone.utc) + timedelta(hours=offset)
+            target_time = optimal_slots[idx] if idx < len(optimal_slots) else (datetime.now(timezone.utc) + timedelta(hours=(idx + 1) * 4))
             due_at = target_time.strftime("%Y-%m-%dT%H:%M:%S.000Z")
             mode = "customScheduled"
+            ist_time = target_time + timedelta(hours=5, minutes=30)
+            print(f"      [Schedule Slot #{idx+1}] Target: {due_at} UTC ({ist_time.strftime('%I:%M %p')} IST)")
         else:
             mode = "addToQueue"
+
 
         print(f"\nPublishing Post #{idx+1} ({content.type}) via mode '{mode}'...")
         if content.type == "single":
