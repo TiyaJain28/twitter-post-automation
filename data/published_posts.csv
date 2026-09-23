@@ -93,3 +93,32 @@ No meetings required.
 Demoly indexes the actual browser DOM and transcript so you can query your UI with natural language and jump straight to the exact second.
 
 #AI #buildinpublic #webdev || img8.png",6ab241264c15d4bd694dd622,sent (2026-09-22T17:00:00.000Z),img8.png,Founder / Visionary
+2026-09-23 08:50:58 UTC,single,"Frontend architecture has evolved dramatically, yet agency bug reporting is still stuck in 2015.
+
+Taking screenshots and typing manual steps in Slack is a massive tax on engineering velocity.
+
+Engineers need DOM states and visual event logs, not vague JIRA tickets.
+
+#webdev",6ab392f2dbca2d0fb6d9fae1,sent (2026-09-24T04:30:00.000Z),none,Founder / Visionary
+2026-09-23 08:51:02 UTC,thread,"We are shipping production code in minutes using Cursor and Claude Code.
+
+Yet agency QA still breaks down at the exact same bottleneck: explaining visual browser bugs to developers.
+
+AI agents can write frontend code, but they are completely blind to browser DOM state. || Traditional screen recorders give devs a 30fps MP4 file and a transcript of someone saying 'fix this weird padding thing over here.'
+
+That is useless data for an AI agent trying to parse a frontend layout regression. || That is why we built Demoly around DOM capture instead of raw pixels.
+
+We capture the actual browser DOM hierarchy, network calls, and precise event streams—turning UI bugs into structured technical data. || Through our upcoming MCP server integration, your QA recordings feed exact DOM trees, console logs, and visual timestamps straight into Cursor and Claude Code.
+
+Your AI coding agent can inspect the exact browser state and patch the bug instantly. || We spent the last decade recording videos for humans.
+
+It is time to start recording videos for the AI agents that actually build our software.
+
+How does your team currently bridge the gap between visual QA and your AI coding stack?
+
+#AI",6ab392f541a6e8df08a141fa,sent (2026-09-23T13:00:00.000Z),none,Founder / Visionary
+2026-09-23 08:51:06 UTC,single,"Delivering client staging previews shouldn't mean exposing internal credentials or sensitive customer PII on screen.
+
+Demoly's element-level masking attaches directly to the DOM. Redact sensitive fields once, and they stay masked across every dynamic scroll.
+
+#productivity || img13.png",6ab392fa41a6e8df08a1428f,sent (2026-09-23T17:00:00.000Z),img13.png,Founder / Visionary
