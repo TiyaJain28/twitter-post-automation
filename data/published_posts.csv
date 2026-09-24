@@ -122,3 +122,28 @@ How does your team currently bridge the gap between visual QA and your AI coding
 Demoly's element-level masking attaches directly to the DOM. Redact sensitive fields once, and they stay masked across every dynamic scroll.
 
 #productivity || img13.png",6ab392fa41a6e8df08a1428f,sent (2026-09-23T17:00:00.000Z),img13.png,Founder / Visionary
+2026-09-24 08:46:17 UTC,single,"Paying $20/seat a month for Loom just so clients can watch raw pixel videos that can't even search a button unless you spoke it aloud is peak SaaS tax.
+
+Stop paying for passive video streaming.
+
+Demoly indexes the DOM for free agency scaling.
+
+#SaaS #productivity #webdev",6ab4e359153ba7c8a69f6eca,sent (2026-09-25T04:30:00.000Z),none,Founder / Visionary
+2026-09-24 08:46:20 UTC,thread,"We are shipping production features in minutes using Cursor and Claude Code.
+
+Yet agency QA still breaks down at the exact same bottleneck: explaining visual browser bugs without proper context. || A QA engineer submits a Slack ticket saying 'button is broken' with a blurry screenshot.
+
+Developers waste 30 minutes trying to reproduce a state they can't see, missing console errors and network payloads. || That is why we built Demoly to bridge visual bug recording directly to developer tooling.
+
+We capture the actual browser DOM hierarchy, user clicks, and network events alongside video. || Through our MCP (Model Context Protocol) server integration, those exact video timestamps, DOM states, and console logs feed straight into AI coding agents like Claude Code and Cursor. || No manual reproduction steps. No guessing what state the DOM was in when the exception fired.
+
+How does your team currently bridge visual QA bug reports to your dev workflow?
+
+#ai #devops #coding",6ab4e35cccbef1e0a54c1bfa,sent (2026-09-24T13:00:00.000Z),none,Founder / Visionary
+2026-09-24 08:46:23 UTC,single,"Loom indexes your speech.
+
+If you didn't say it out loud on camera, it never happened.
+
+Demoly indexes the actual browser DOM, text nodes, and UI clicks so your clients can search visual elements instantly—even on silent walkthroughs.
+
+#webdev #automation || img8.png",6ab4e35fccbef1e0a54c1c5e,sent (2026-09-24T17:00:00.000Z),img8.png,Founder / Visionary
